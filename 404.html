@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <base href="/Portfolio/" />
-    <link href="_framework/dotnet.qen3ujbjww.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-vuwtGQlLLrDrkk6i3P7vcz1yfw1/MlLkdPRsHsNxoQw=" />
+    <link href="_framework/dotnet.mas3uyxvvg.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-AthoTMOsBISbnvlMUse4LIZjHcO0iOp/DcvFuVBxVzk=" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="Portfolio.styles.css" rel="stylesheet" />
@@ -16,18 +16,18 @@
     <script type="importmap">{
   "imports": {
     "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.66stpp682q.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.mas3uyxvvg.js",
     "./_framework/dotnet.native.js": "./_framework/dotnet.native.ykrnppwhq2.js",
-    "./_framework/dotnet.js": "./_framework/dotnet.qen3ujbjww.js",
     "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.peu2mfb29t.js"
   },
   "scopes": {},
   "integrity": {
     "./_framework/blazor.webassembly.66stpp682q.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
     "./_framework/blazor.webassembly.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
-    "./_framework/dotnet.js": "sha256-vuwtGQlLLrDrkk6i3P7vcz1yfw1/MlLkdPRsHsNxoQw=",
+    "./_framework/dotnet.js": "sha256-AthoTMOsBISbnvlMUse4LIZjHcO0iOp/DcvFuVBxVzk=",
+    "./_framework/dotnet.mas3uyxvvg.js": "sha256-AthoTMOsBISbnvlMUse4LIZjHcO0iOp/DcvFuVBxVzk=",
     "./_framework/dotnet.native.js": "sha256-nheeN4H7Js+avp9nd/sQxdaehbeEx3qriXjiZ3pSw6U=",
     "./_framework/dotnet.native.ykrnppwhq2.js": "sha256-nheeN4H7Js+avp9nd/sQxdaehbeEx3qriXjiZ3pSw6U=",
-    "./_framework/dotnet.qen3ujbjww.js": "sha256-vuwtGQlLLrDrkk6i3P7vcz1yfw1/MlLkdPRsHsNxoQw=",
     "./_framework/dotnet.runtime.js": "sha256-cajUr4vA/MpLPWj3omULUOwEQw3i8CE2n8AmDheqWBM=",
     "./_framework/dotnet.runtime.peu2mfb29t.js": "sha256-cajUr4vA/MpLPWj3omULUOwEQw3i8CE2n8AmDheqWBM="
   }
@@ -36,11 +36,13 @@
 
 <body>
     <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
+        <div class="startup-loader">
+            <div class="startup-loader-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
 
     <div id="blazor-error-ui">
