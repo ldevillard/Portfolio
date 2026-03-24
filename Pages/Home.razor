@@ -1,7 +1,44 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="mt-12">
+    <MudPaper Elevation="4" Class="pa-8 rounded-lg">
+        <MudText Typo="Typo.h3" GutterBottom="true">
+            Welcome to my portfolio
+        </MudText>
 
-<h1>Hello, world!</h1>
+        <MudText Typo="Typo.body1" Class="mb-6">
+            This is a simple MudBlazor test page to verify that components,
+            styling, and layout are working correctly.
+        </MudText>
 
-Welcome to your new app.
+        <MudGrid Spacing="3" Class="mb-6">
+            <MudItem xs="12" sm="6">
+                <MudPaper Class="pa-4">
+                    <MudText Typo="Typo.h6">Card One</MudText>
+                    <MudText Typo="Typo.body2">
+                        A basic content block to test the layout.
+                    </MudText>
+                </MudPaper>
+            </MudItem>
+
+            <MudItem xs="12" sm="6">
+                <MudPaper Class="pa-4">
+                    <MudText Typo="Typo.h6">Card Two</MudText>
+                    <MudText Typo="Typo.body2">
+                        If this looks good, MudBlazor is correctly installed.
+                    </MudText>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+
+        <MudStack Row="true" Spacing="2">
+            <MudButton Variant="Variant.Filled" Color="Color.Primary">
+                Primary button
+            </MudButton>
+
+            <MudButton Variant="Variant.Outlined" Color="Color.Secondary">
+                Secondary button
+            </MudButton>
+        </MudStack>
+    </MudPaper>
+</MudContainer>
