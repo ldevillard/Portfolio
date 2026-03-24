@@ -8,16 +8,16 @@ namespace Portfolio.Themes
         {
             PaletteDark = new PaletteDark()
             {
-                Primary = "#E6DED3",
+                Primary = "#a89c8a",
                 Secondary = "#B8B0A6",
 
-                Background = "#3A3B49",
-                Surface = "#3F4050",
-                AppbarBackground = "#2D2E3A",
-                DrawerBackground = "#2F303C",
+                Background = "#262732",
+                Surface = "#353747",
+                AppbarBackground = "#2B2D38",
+                DrawerBackground = "#2E303C",
 
                 TextPrimary = "#F4EEE6",
-                TextSecondary = "#D2CBC2",
+                TextSecondary = "#CBC4BA",
 
                 DrawerText = "#EEE6DC",
                 DrawerIcon = "#D8D0C6",

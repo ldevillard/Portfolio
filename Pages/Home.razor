@@ -1,44 +1,122 @@
 ﻿@page "/"
 
-<MudContainer MaxWidth="MaxWidth.Medium" Class="mt-12">
-    <MudPaper Elevation="4" Class="pa-8 rounded-lg">
-        <MudText Typo="Typo.h3" GutterBottom="true">
-            Welcome to my portfolio
-        </MudText>
+<MudContainer MaxWidth="MaxWidth.Large" Class="py-12">
 
-        <MudText Typo="Typo.body1" Class="mb-6">
-            This is a simple MudBlazor test page to verify that components,
-            styling, and layout are working correctly.
-        </MudText>
+    <MudStack Spacing="8" AlignItems="AlignItems.Center">
 
-        <MudGrid Spacing="3" Class="mb-6">
-            <MudItem xs="12" sm="6">
-                <MudPaper Class="pa-4">
-                    <MudText Typo="Typo.h6">Card One</MudText>
-                    <MudText Typo="Typo.body2">
-                        A basic content block to test the layout.
-                    </MudText>
-                </MudPaper>
-            </MudItem>
+        <MudPaper Class="presentation-section pa-8 pa-md-12" Elevation="0">
+            <MudStack Spacing="3" AlignItems="AlignItems.Center">
+                <MudText Typo="Typo.h3" Align="Align.Center" Class="presentation-title">
+                    Hi, I'm <span class="presentation-highlight">Logan Devillard</span>
+                </MudText>
 
-            <MudItem xs="12" sm="6">
-                <MudPaper Class="pa-4">
-                    <MudText Typo="Typo.h6">Card Two</MudText>
-                    <MudText Typo="Typo.body2">
-                        If this looks good, MudBlazor is correctly installed.
-                    </MudText>
-                </MudPaper>
-            </MudItem>
-        </MudGrid>
+                <MudText Typo="Typo.h6" Align="Align.Center" Class="presentation-subtitle">
+                    Game programmer, graphics enthusiast, and engine developer.
+                </MudText>
 
-        <MudStack Row="true" Spacing="2">
-            <MudButton Variant="Variant.Filled" Color="Color.Primary">
-                Primary button
-            </MudButton>
+                <MudText Typo="Typo.body1" Align="Align.Center" Class="presentation-description">
+                    I build interactive experiences, rendering systems, and technical projects.
+                    This space is where I share what I create, learn, and explore.
+                </MudText>
 
-            <MudButton Variant="Variant.Outlined" Color="Color.Secondary">
-                Secondary button
-            </MudButton>
+                <MudStack Row="true" Spacing="2" Justify="Justify.Center" Class="mt-2 flex-wrap">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large">
+                        View Projects
+                    </MudButton>
+
+                    <MudButton Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Large">
+                        Contact Me
+                    </MudButton>
+                </MudStack>
+
+                <MudStack Row="true" Spacing="2" Justify="Justify.Center" Class="mt-4 flex-wrap">
+                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">C++</MudChip>
+                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">OpenGL</MudChip>
+                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">Unreal Engine</MudChip>
+                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">Rendering</MudChip>
+                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">Tools</MudChip>
+                </MudStack>
+            </MudStack>
+        </MudPaper>
+
+        <!-- SOCIAL / QUICK LINKS -->
+        <MudPaper Class="social-strip pa-4" Elevation="0">
+            <MudStack Row="true" Spacing="2" Justify="Justify.Center" AlignItems="AlignItems.Center" Class="flex-wrap">
+                <MudButton Variant="Variant.Text" Color="Color.Default">GitHub</MudButton>
+                <MudButton Variant="Variant.Text" Color="Color.Default">LinkedIn</MudButton>
+                <MudButton Variant="Variant.Text" Color="Color.Default">Articles</MudButton>
+                <MudButton Variant="Variant.Text" Color="Color.Default">Resume</MudButton>
+                <MudButton Variant="Variant.Text" Color="Color.Default">Email</MudButton>
+            </MudStack>
+        </MudPaper>
+
+        <!-- SECTION TITLE -->
+        <MudStack Spacing="1" AlignItems="AlignItems.Center" Class="mt-4">
+            <MudText Typo="Typo.h4" Align="Align.Center">
+                Explore my work
+            </MudText>
+            <MudText Typo="Typo.body1" Align="Align.Center" Class="section-subtitle">
+                A few areas I like to build and share.
+            </MudText>
         </MudStack>
-    </MudPaper>
+
+        <!-- GRID -->
+        <MudGrid Spacing="4" Class="mt-2">
+
+            <MudItem xs="12" sm="6" md="4">
+                <MudPaper Class="content-card pa-6 h-100" Elevation="0">
+                    <MudText Typo="Typo.h5" Class="mb-3">Projects</MudText>
+                    <MudText Typo="Typo.body1" Class="card-text">
+                        Personal experiments, engine work, rendering prototypes, and gameplay systems.
+                    </MudText>
+                </MudPaper>
+            </MudItem>
+
+            <MudItem xs="12" sm="6" md="4">
+                <MudPaper Class="content-card pa-6 h-100" Elevation="0">
+                    <MudText Typo="Typo.h5" Class="mb-3">Graphics</MudText>
+                    <MudText Typo="Typo.body1" Class="card-text">
+                        Shaders, ray tracing, GPU workflows, and real-time rendering exploration.
+                    </MudText>
+                </MudPaper>
+            </MudItem>
+
+            <MudItem xs="12" sm="6" md="4">
+                <MudPaper Class="content-card pa-6 h-100" Elevation="0">
+                    <MudText Typo="Typo.h5" Class="mb-3">Game Programming</MudText>
+                    <MudText Typo="Typo.body1" Class="card-text">
+                        Architecture, gameplay code, tools, and clean technical implementation.
+                    </MudText>
+                </MudPaper>
+            </MudItem>
+
+            <MudItem xs="12" sm="6" md="4">
+                <MudPaper Class="content-card pa-6 h-100" Elevation="0">
+                    <MudText Typo="Typo.h5" Class="mb-3">Articles</MudText>
+                    <MudText Typo="Typo.body1" Class="card-text">
+                        Notes, breakdowns, and dev write-ups about graphics, engines, and programming.
+                    </MudText>
+                </MudPaper>
+            </MudItem>
+
+            <MudItem xs="12" sm="6" md="4">
+                <MudPaper Class="content-card pa-6 h-100" Elevation="0">
+                    <MudText Typo="Typo.h5" Class="mb-3">About Me</MudText>
+                    <MudText Typo="Typo.body1" Class="card-text">
+                        My background, what I enjoy building, and the kind of work I want to do more of.
+                    </MudText>
+                </MudPaper>
+            </MudItem>
+
+            <MudItem xs="12" sm="6" md="4">
+                <MudPaper Class="content-card pa-6 h-100" Elevation="0">
+                    <MudText Typo="Typo.h5" Class="mb-3">Contact</MudText>
+                    <MudText Typo="Typo.body1" Class="card-text">
+                        Let’s connect for opportunities, collaboration, or just to talk about graphics and tech.
+                    </MudText>
+                </MudPaper>
+            </MudItem>
+
+        </MudGrid>
+    </MudStack>
 </MudContainer>
