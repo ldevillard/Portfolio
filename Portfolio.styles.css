@@ -2,7 +2,6 @@
 .featured-cards-grid[b-b7n2mxh6rg] {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    justify-content: center;
     align-items: stretch;
     width: 100%;
     gap: 72px;
@@ -24,7 +23,7 @@
 /* /Components/FeaturedCard.razor.rz.scp.css */
 .featured-card[b-itqkk9s92p] {
     width: 100%;
-    height: 100%;
+    min-width: 0;
     border-radius: 18px;
     background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025));
     border: 1px solid rgba(255,255,255,0.05);
@@ -39,7 +38,7 @@
 }
 
 .featured-card-content[b-itqkk9s92p] {
-    height: 100%;
+    min-height: 100%;
 }
 
 .featured-card-image-link[b-itqkk9s92p] {
@@ -49,6 +48,8 @@
 
 .featured-card-image-wrap[b-itqkk9s92p] {
     width: 200px;
+    height: 200px;
+    max-width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 18px;
@@ -56,6 +57,12 @@
     border: 1px solid rgba(255,255,255,0.06);
     margin: 0 auto;
     transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+    .featured-card-image-wrap[b-itqkk9s92p] {
+        height: auto;
+    }
 }
 
 .featured-card-image-link:hover .featured-card-image-wrap[b-itqkk9s92p] {
