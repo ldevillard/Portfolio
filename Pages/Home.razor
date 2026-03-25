@@ -6,17 +6,30 @@
 
         <MudPaper Class="presentation-section pa-8 pa-md-12" Elevation="0">
             <MudStack Spacing="3" AlignItems="AlignItems.Center">
-                <MudText Typo="Typo.h3" Align="Align.Center" Class="presentation-title">
-                    Hi, I'm <span class="presentation-highlight">Logan Devillard</span>
-                </MudText>
+                <MudStack Row="true"
+                          Spacing="3"
+                          AlignItems="AlignItems.Center"
+                          Justify="Justify.Center"
+                          Class="presentation-header">
 
-                <MudText Typo="Typo.h6" Align="Align.Center" Class="presentation-subtitle">
-                    Game programmer, graphics enthusiast, and engine developer.
-                </MudText>
+                    <MudText Typo="Typo.h3" Align="Align.Center" Class="presentation-title">
+                        Hi, I'm <span class="presentation-highlight">Logan Devillard</span>
+                    </MudText>
+
+                    <img src="images/profile.png" alt="Logan Devillard" class="profile-picture" />
+                </MudStack>
 
                 <MudText Typo="Typo.body1" Align="Align.Center" Class="presentation-description">
-                    I build interactive experiences, rendering systems, and technical projects.
-                    This space is where I share what I create, learn, and explore.
+                    My name is Logan Devillard. I'm from a small town next to Lyon in France 🇫🇷.
+                    I studied computer programming at
+                    <a href="https://42lyon.fr/" target="_blank" rel="noopener noreferrer">42 Lyon</a>
+                    and I’m currently an engine programmer working at
+                    <a href="https://www.virtuosgames.com/" target="_blank" rel="noopener noreferrer">Virtuos</a>
+                    on AAA game development 🕹️.
+                    <br /><br />
+                    I have a strong interest in engine, rendering, and low-level systems.
+                    I enjoy building personal projects and sharing what I learn along the way.
+                    If anything on this site can help, inspire, or be useful to someone else, then that already means a lot to me 🚀.
                 </MudText>
 
                 <MudStack Row="true" Spacing="2" Justify="Justify.Center" Class="mt-2 flex-wrap">
@@ -31,9 +44,10 @@
 
                 <MudStack Row="true" Spacing="2" Justify="Justify.Center" Class="mt-4 flex-wrap">
                     <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">C++</MudChip>
+                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">C#</MudChip>
                     <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">OpenGL</MudChip>
                     <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">Unreal Engine</MudChip>
-                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">Rendering</MudChip>
+                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">Unity</MudChip>
                     <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">Tools</MudChip>
                 </MudStack>
             </MudStack>
