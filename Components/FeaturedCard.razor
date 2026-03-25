@@ -1,0 +1,28 @@
+<MudItem xs="@Xs" sm="@Sm" md="@Md">
+    <MudPaper Class="featured-card pa-4" Elevation="0">
+        <MudStack AlignItems="AlignItems.Center" Spacing="2">
+            <div class="featured-card-image-wrap">
+                <img src="@ImageSrc" alt="@ImageAlt" class="featured-card-image" />
+            </div>
+
+            <MudText Typo="Typo.h6" Align="Align.Center">@Title</MudText>
+
+            @if (!string.IsNullOrWhiteSpace(Role))
+            {
+                <MudChip T="string"
+                         Size="Size.Small"
+                         Variant="Variant.Outlined"
+                         Color="Color.Secondary">
+                    @Role
+                </MudChip>
+            }
+
+            @if (!string.IsNullOrWhiteSpace(Description))
+            {
+                <MudText Typo="Typo.body2" Align="Align.Center" Class="card-text">
+                    @Description
+                </MudText>
+            }
+        </MudStack>
+    </MudPaper>
+</MudItem>
