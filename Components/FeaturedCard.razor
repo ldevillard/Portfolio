@@ -1,28 +1,42 @@
-<MudItem xs="@Xs" sm="@Sm" md="@Md">
-    <MudPaper Class="featured-card pa-4" Elevation="0">
-        <MudStack AlignItems="AlignItems.Center" Spacing="2">
+<MudPaper Class="featured-card" Elevation="0">
+    <MudStack AlignItems="AlignItems.Center" Spacing="2" Class="featured-card-content">
+        @if (!string.IsNullOrWhiteSpace(CreditsUrl))
+        {
+            <a href="@CreditsUrl"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="featured-card-image-link">
+                <div class="featured-card-image-wrap">
+                    <img src="@ImageSrc" alt="@ImageAlt" class="featured-card-image" />
+                </div>
+            </a>
+        }
+        else
+        {
             <div class="featured-card-image-wrap">
                 <img src="@ImageSrc" alt="@ImageAlt" class="featured-card-image" />
             </div>
+        }
 
-            <MudText Typo="Typo.h6" Align="Align.Center">@Title</MudText>
+        <MudText Typo="Typo.h6" Align="Align.Center">
+            @Title
+        </MudText>
 
-            @if (!string.IsNullOrWhiteSpace(Role))
-            {
-                <MudChip T="string"
-                         Size="Size.Small"
-                         Variant="Variant.Outlined"
-                         Color="Color.Secondary">
-                    @Role
-                </MudChip>
-            }
+        @if (!string.IsNullOrWhiteSpace(Role))
+        {
+            <MudChip T="string"
+                     Size="Size.Small"
+                     Variant="Variant.Outlined"
+                     Color="Color.Secondary">
+                @Role
+            </MudChip>
+        }
 
-            @if (!string.IsNullOrWhiteSpace(Description))
-            {
-                <MudText Typo="Typo.body2" Align="Align.Center" Class="card-text">
-                    @Description
-                </MudText>
-            }
-        </MudStack>
-    </MudPaper>
-</MudItem>
+        @if (!string.IsNullOrWhiteSpace(Description))
+        {
+            <MudText Typo="Typo.body2" Align="Align.Center" Class="card-text">
+                @Description
+            </MudText>
+        }
+    </MudStack>
+</MudPaper>
