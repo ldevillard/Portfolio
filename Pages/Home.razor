@@ -31,36 +31,58 @@
                     I enjoy building personal projects and sharing what I learn along the way.
                     If anything on this site can help, inspire, or be useful to someone else, then that already means a lot to me 🚀.
                 </MudText>
-
-                <MudStack Row="true" Spacing="2" Justify="Justify.Center" Class="mt-2 flex-wrap">
-                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large">
-                        View Projects
-                    </MudButton>
-
-                    <MudButton Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Large">
-                        Contact Me
-                    </MudButton>
-                </MudStack>
-
-                <MudStack Row="true" Spacing="2" Justify="Justify.Center" Class="mt-4 flex-wrap">
-                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">C++</MudChip>
-                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">C#</MudChip>
-                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">OpenGL</MudChip>
-                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">Unreal Engine</MudChip>
-                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">Unity</MudChip>
-                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Default">Tools</MudChip>
-                </MudStack>
             </MudStack>
         </MudPaper>
 
         <!-- SOCIAL / QUICK LINKS -->
         <MudPaper Class="social-strip pa-4" Elevation="0">
-            <MudStack Row="true" Spacing="2" Justify="Justify.Center" AlignItems="AlignItems.Center" Class="flex-wrap">
-                <MudButton Variant="Variant.Text" Color="Color.Default">GitHub</MudButton>
-                <MudButton Variant="Variant.Text" Color="Color.Default">LinkedIn</MudButton>
-                <MudButton Variant="Variant.Text" Color="Color.Default">Articles</MudButton>
-                <MudButton Variant="Variant.Text" Color="Color.Default">Resume</MudButton>
-                <MudButton Variant="Variant.Text" Color="Color.Default">Email</MudButton>
+            <MudStack Row="true" Spacing="2" Justify="Justify.Center" Class="flex-wrap">
+                <MudChip T="string"
+                         Clickable="true"
+                         Href="https://github.com/ldevillard"
+                         Target="_blank"
+                         Variant="Variant.Outlined"
+                         Color="Color.Secondary"
+                         Icon="@Icons.Custom.Brands.GitHub">
+                    GitHub
+                </MudChip>
+
+                <MudChip T="string"
+                         Clickable="true"
+                         Href="https://www.linkedin.com/in/logan-devillard-004971207/"
+                         Target="_blank"
+                         Variant="Variant.Outlined"
+                         Color="Color.Secondary"
+                         Icon="@Icons.Custom.Brands.LinkedIn">
+                    LinkedIn
+                </MudChip>
+
+                <MudChip T="string"
+                         Clickable="true"
+                         Href="/articles"
+                         Variant="Variant.Outlined"
+                         Color="Color.Secondary"
+                         Icon="@Icons.Material.Filled.Article">
+                    Articles
+                </MudChip>
+
+                <MudChip T="string"
+                         Clickable="true"
+                         Href="/projects"
+                         Variant="Variant.Outlined"
+                         Color="Color.Secondary"
+                         Icon="@Icons.Material.Filled.Code">
+                    Projects
+                </MudChip>
+
+                <MudChip T="string"
+                         Clickable="true"
+                         Href="mailto:logandvllrd@gmail.com"
+                         Variant="Variant.Outlined"
+                         Color="Color.Secondary"
+                         Icon="@Icons.Material.Filled.Email">
+                    Email
+                </MudChip>
             </MudStack>
         </MudPaper>
 
