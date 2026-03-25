@@ -1,6 +1,6 @@
 .featured-card {
     width: 100%;
-    height: 100%;
+    min-width: 0;
     border-radius: 18px;
     background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025));
     border: 1px solid rgba(255,255,255,0.05);
@@ -15,7 +15,7 @@
 }
 
 .featured-card-content {
-    height: 100%;
+    min-height: 100%;
 }
 
 .featured-card-image-link {
@@ -25,6 +25,8 @@
 
 .featured-card-image-wrap {
     width: 200px;
+    height: 200px;
+    max-width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 18px;
@@ -32,6 +34,12 @@
     border: 1px solid rgba(255,255,255,0.06);
     margin: 0 auto;
     transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+    .featured-card-image-wrap {
+        height: auto;
+    }
 }
 
 .featured-card-image-link:hover .featured-card-image-wrap {
