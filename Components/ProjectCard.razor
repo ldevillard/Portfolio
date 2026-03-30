@@ -3,7 +3,7 @@
         <MudStack Spacing="1" AlignItems="AlignItems.Start" Style="flex: 1 1 auto; min-width: 0;">
             @if (Categories.Count > 0)
             {
-                <MudStack Row="true" Spacing="1">
+                <MudStack Row="true" Spacing="1" Style="flex-wrap: wrap;">
                     @foreach (string category in Categories)
                     {
                         <MudChip T="string"
@@ -29,13 +29,22 @@
             }
 
             <MudText Typo="Typo.h6">@Title</MudText>
+
+            <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                <img src="@ImageSrc"
+                     alt="@Title"
+                     width="220"
+                     height="128"
+                     style="display: block; width: 100%; height: auto; object-fit: cover; border-radius: 8px;" />
+            </MudHidden>
+
             <MudText Typo="Typo.body2">
                 @Description
             </MudText>
 
             @if (!string.IsNullOrWhiteSpace(Href) || !string.IsNullOrWhiteSpace(GithubHref))
             {
-                <MudStack Row="true" Spacing="1" Class="mt-1">
+                <MudStack Row="true" Spacing="1" Class="mt-1" Style="flex-wrap: wrap;">
                     @if (!string.IsNullOrWhiteSpace(Href))
                     {
                         <MudChip T="string"
@@ -51,12 +60,14 @@
             }
         </MudStack>
 
-        <MudStack AlignItems="AlignItems.End" Justify="Justify.Center" Style="flex-basis: 220px; flex-shrink: 0;">
-            <img src="@ImageSrc"
-                 alt="@Title"
-                 width="220"
-                 height="128"
-                 style="display: block; object-fit: cover; border-radius: 8px;" />
-        </MudStack>
+        <MudHidden Breakpoint="Breakpoint.SmAndDown">
+            <MudStack AlignItems="AlignItems.End" Justify="Justify.Center" Style="flex-basis: 220px; flex-shrink: 0;">
+                <img src="@ImageSrc"
+                     alt="@Title"
+                     width="220"
+                     height="128"
+                     style="display: block; object-fit: cover; border-radius: 8px;" />
+            </MudStack>
+        </MudHidden>
     </MudStack>
 </MudPaper>
