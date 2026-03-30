@@ -103,57 +103,45 @@
         <MudGrid Spacing="4" Class="mt-2">
 
             <MudItem xs="12" sm="6" md="4">
-                <MudPaper Class="content-card pa-6 h-100" Elevation="0">
-                    <MudText Typo="Typo.h5" Class="mb-3">Projects</MudText>
-                    <MudText Typo="Typo.body1" Class="card-text">
-                        Personal experiments, engine work, rendering prototypes, and gameplay systems.
-                    </MudText>
-                </MudPaper>
+                <a href="/projects" class="content-card-link" aria-label="Open projects page">
+                    <MudPaper Class="content-card pa-6 h-100" Elevation="0">
+                        <MudText Typo="Typo.h5" Class="mb-3">Projects</MudText>
+                        <div class="content-card-media">
+                            <img src="images/raytracing.png" alt="Projects showcase" class="content-card-image" />
+                        </div>
+                        <MudText Typo="Typo.body1" Class="card-text">
+                            Personal experiments, engine work, rendering prototypes, and game systems.
+                        </MudText>
+                    </MudPaper>
+                </a>
             </MudItem>
 
             <MudItem xs="12" sm="6" md="4">
-                <MudPaper Class="content-card pa-6 h-100" Elevation="0">
-                    <MudText Typo="Typo.h5" Class="mb-3">Graphics</MudText>
-                    <MudText Typo="Typo.body1" Class="card-text">
-                        Shaders, ray tracing, GPU workflows, and real-time rendering exploration.
-                    </MudText>
-                </MudPaper>
+                <a href="/articles" class="content-card-link" aria-label="Open articles page">
+                    <MudPaper Class="content-card pa-6 h-100" Elevation="0">
+                        <MudText Typo="Typo.h5" Class="mb-3">Articles</MudText>
+                        <div class="content-card-media">
+                            <img src="images/bvh-showcase.gif" alt="Articles showcase" class="content-card-image" />
+                        </div>
+                        <MudText Typo="Typo.body1" Class="card-text">
+                            Notes, breakdowns, and dev write-ups about graphics, engines, and programming.
+                        </MudText>
+                    </MudPaper>
+                </a>
             </MudItem>
 
             <MudItem xs="12" sm="6" md="4">
-                <MudPaper Class="content-card pa-6 h-100" Elevation="0">
-                    <MudText Typo="Typo.h5" Class="mb-3">Game Programming</MudText>
-                    <MudText Typo="Typo.body1" Class="card-text">
-                        Architecture, gameplay code, tools, and clean technical implementation.
-                    </MudText>
-                </MudPaper>
-            </MudItem>
-
-            <MudItem xs="12" sm="6" md="4">
-                <MudPaper Class="content-card pa-6 h-100" Elevation="0">
-                    <MudText Typo="Typo.h5" Class="mb-3">Articles</MudText>
-                    <MudText Typo="Typo.body1" Class="card-text">
-                        Notes, breakdowns, and dev write-ups about graphics, engines, and programming.
-                    </MudText>
-                </MudPaper>
-            </MudItem>
-
-            <MudItem xs="12" sm="6" md="4">
-                <MudPaper Class="content-card pa-6 h-100" Elevation="0">
-                    <MudText Typo="Typo.h5" Class="mb-3">About Me</MudText>
-                    <MudText Typo="Typo.body1" Class="card-text">
-                        My background, what I enjoy building, and the kind of work I want to do more of.
-                    </MudText>
-                </MudPaper>
-            </MudItem>
-
-            <MudItem xs="12" sm="6" md="4">
-                <MudPaper Class="content-card pa-6 h-100" Elevation="0">
-                    <MudText Typo="Typo.h5" Class="mb-3">Contact</MudText>
-                    <MudText Typo="Typo.body1" Class="card-text">
-                        Let’s connect for opportunities, collaboration, or just to talk about graphics and tech.
-                    </MudText>
-                </MudPaper>
+                <a href="/about" class="content-card-link" aria-label="Open about page">
+                    <MudPaper Class="content-card pa-6 h-100" Elevation="0">
+                        <MudText Typo="Typo.h5" Class="mb-3">About Me</MudText>
+                        <div class="content-card-media">
+                            <img src="images/profile.png" alt="Profile portrait" class="content-card-image" />
+                        </div>
+                        <MudText Typo="Typo.body1" Class="card-text">
+                            My background, what I enjoy building, and the kind of work I want to do more of.
+                        </MudText>
+                    </MudPaper>
+                </a>
             </MudItem>
 
         </MudGrid>
