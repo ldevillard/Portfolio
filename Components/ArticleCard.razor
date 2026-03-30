@@ -1,0 +1,31 @@
+<a href="@Href"
+   target="_blank"
+   rel="noopener noreferrer">
+    <MudPaper Class="px-4 py-3 rounded-lg" Elevation="0" Outlined="true">
+        <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
+            <MudStack Spacing="0" AlignItems="AlignItems.Start">
+                @if (!string.IsNullOrWhiteSpace(Category))
+                {
+                    <MudChip T="string"
+                             Size="Size.Small"
+                             Variant="Variant.Outlined"
+                             Color="Color.Secondary"
+                             Class="mb-1">
+                        @Category
+                    </MudChip>
+                }
+
+                <MudText Typo="Typo.subtitle2">@Title</MudText>
+            </MudStack>
+
+            <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Start">
+                <img src="@ImageSrc"
+                     alt="@Title"
+                     width="120"
+                     height="56"
+                     style="object-fit: cover; border-radius: 8px;" />
+                <MudIcon Icon="@Icons.Material.Filled.ArrowOutward" />
+            </MudStack>
+        </MudStack>
+    </MudPaper>
+</a>

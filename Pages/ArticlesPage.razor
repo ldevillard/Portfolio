@@ -25,31 +25,10 @@
         <MudDivider Class="w-100" />
 
         <MudStack Spacing="3" Class="articles-list">
-            <a href="https://medium.com/%40logandvllrd/how-to-pick-a-3d-object-using-raycasting-in-c-39112aed1987"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="article-row-link">
-                <MudPaper Class="px-4 py-3" Elevation="0">
-                    <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
-                        <MudStack Spacing="0" AlignItems="AlignItems.Start">
-                            <MudChip T="string"
-                                     Size="Size.Small"
-                                     Variant="Variant.Outlined"
-                                     Color="Color.Secondary"
-                                     Class="mb-1">
-                                Engine
-                            </MudChip>
-                            <MudText Typo="Typo.subtitle2">How to pick a 3D object using raycasting in C++</MudText>
-                        </MudStack>
-                        <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Start">
-                            <img src="images/picker.png"
-                                 alt="Object picker preview"
-                                 style="width: 120px; height: 56px; object-fit: cover; border-radius: 10px; display: block;" />
-                            <MudIcon Icon="@Icons.Material.Filled.ArrowOutward" Class="article-row-icon" />
-                        </MudStack>
-                    </MudStack>
-                </MudPaper>
-            </a>
+            <ArticleCard Href="https://medium.com/%40logandvllrd/how-to-pick-a-3d-object-using-raycasting-in-c-39112aed1987"
+                         Category="Engine"
+                         Title="How to pick a 3D object using raycasting in C++"
+                         ImageSrc="images/picker.png" />
         </MudStack>
     </MudStack>
 </MudContainer>
