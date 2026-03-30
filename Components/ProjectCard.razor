@@ -1,65 +1,62 @@
-@if (string.IsNullOrWhiteSpace(Href))
-{
-    <MudPaper Class="pa-4 rounded-lg" Elevation="0" Outlined="true">
-        <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Spacing="3">
-            <MudStack Spacing="1" AlignItems="AlignItems.Start">
-                @if (!string.IsNullOrWhiteSpace(Category))
-                {
-                    <MudChip T="string"
-                             Size="Size.Small"
-                             Variant="Variant.Outlined"
-                             Color="Color.Secondary">
-                        @Category
-                    </MudChip>
-                }
-
-                <MudText Typo="Typo.h6">@Title</MudText>
-                <MudText Typo="Typo.body2">
-                    @Description
-                </MudText>
-            </MudStack>
-
-            <img src="@ImageSrc"
-                 alt="@Title"
-                 width="180"
-                 height="104"
-                 style="object-fit: cover; border-radius: 8px;" />
-        </MudStack>
-    </MudPaper>
-}
-else
-{
-    <a href="@Href"
-       target="_blank"
-       rel="noopener noreferrer">
-        <MudPaper Class="pa-4 rounded-lg" Elevation="0" Outlined="true">
-            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Spacing="3">
-                <MudStack Spacing="1" AlignItems="AlignItems.Start">
-                    @if (!string.IsNullOrWhiteSpace(Category))
+<MudPaper Class="pa-4 rounded-lg" Elevation="0" Outlined="true">
+    <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Spacing="3">
+        <MudStack Spacing="1" AlignItems="AlignItems.Start" Style="flex: 1 1 auto; min-width: 0;">
+            @if (Categories.Count > 0)
+            {
+                <MudStack Row="true" Spacing="1">
+                    @foreach (string category in Categories)
                     {
                         <MudChip T="string"
                                  Size="Size.Small"
                                  Variant="Variant.Outlined"
                                  Color="Color.Secondary">
-                            @Category
+                            @category
                         </MudChip>
                     }
-
-                    <MudText Typo="Typo.h6">@Title</MudText>
-                    <MudText Typo="Typo.body2">
-                        @Description
-                    </MudText>
+                    @if (!string.IsNullOrWhiteSpace(GithubHref))
+                    {
+                        <MudChip T="string"
+                                 Href="@GithubHref"
+                                 Target="_blank"
+                                 Size="Size.Small"
+                                 Variant="Variant.Outlined"
+                                 Color="Color.Warning"
+                                 Icon="@Icons.Custom.Brands.GitHub">
+                            Github
+                        </MudChip>
+                    }
                 </MudStack>
+            }
 
-                <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center">
-                    <img src="@ImageSrc"
-                         alt="@Title"
-                         width="180"
-                         height="104"
-                         style="object-fit: cover; border-radius: 8px;" />
-                    <MudIcon Icon="@Icons.Material.Filled.ArrowOutward" Color="Color.Secondary" />
+            <MudText Typo="Typo.h6">@Title</MudText>
+            <MudText Typo="Typo.body2">
+                @Description
+            </MudText>
+
+            @if (!string.IsNullOrWhiteSpace(Href) || !string.IsNullOrWhiteSpace(GithubHref))
+            {
+                <MudStack Row="true" Spacing="1" Class="mt-1">
+                    @if (!string.IsNullOrWhiteSpace(Href))
+                    {
+                        <MudChip T="string"
+                                 Href="@Href"
+                                 Target="_blank"
+                                 Variant="Variant.Outlined"
+                                 Color="Color.Secondary"
+                                 Icon="@Icons.Material.Filled.ArrowOutward">
+                            Project
+                        </MudChip>
+                    }
                 </MudStack>
-            </MudStack>
-        </MudPaper>
-    </a>
-}
+            }
+        </MudStack>
+
+        <MudStack AlignItems="AlignItems.End" Justify="Justify.Center" Style="flex-basis: 220px; flex-shrink: 0;">
+            <img src="@ImageSrc"
+                 alt="@Title"
+                 width="220"
+                 height="128"
+                 style="display: block; object-fit: cover; border-radius: 8px;" />
+        </MudStack>
+    </MudStack>
+</MudPaper>
