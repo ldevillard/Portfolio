@@ -10,6 +10,7 @@ namespace Portfolio.Themes
             {
                 Primary = "#a89c8a",
                 Secondary = "#B8B0A6",
+                Tertiary = "#8a7651",
 
                 Background = "#262732",
                 Surface = "#353747",
