@@ -1,17 +1,9 @@
 @page "/articles"
-@inject NavigationManager Navigation
-
 <PageTitle>Articles</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.Medium" Class="py-12">
     <MudStack Spacing="6">
-        <MudButton OnClick="@(() => Navigation.NavigateTo(""))"
-                   Variant="Variant.Text"
-                   Color="Color.Secondary"
-                   StartIcon="@Icons.Material.Filled.ArrowBack"
-                   Class="align-self-start">
-            Back to Home
-        </MudButton>
+        <BackHomeButton Class="align-self-start" />
         
         <MudPaper Class="presentation-section pa-8" Elevation="0">
             <MudStack Spacing="3">

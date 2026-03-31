@@ -1,0 +1,15 @@
+<MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
+    <MudStack Spacing="3" AlignItems="AlignItems.Center">
+        <MudText Typo="Typo.h4" Align="Align.Center">
+            @Title
+        </MudText>
+
+        <img src="@ImageSrc"
+             alt="@Title"
+             style="display: block; width: 100%; max-width: 720px; height: auto; object-fit: cover; border-radius: 8px;" />
+
+        <MudText Typo="Typo.body1" Align="Align.Center">
+            @Description
+        </MudText>
+    </MudStack>
+</MudPaper>

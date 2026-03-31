@@ -1,0 +1,9 @@
+@inject NavigationManager Navigation
+
+<MudButton OnClick="@(() => Navigation.NavigateTo(Href))"
+           Variant="Variant.Text"
+           Color="Color.Secondary"
+           StartIcon="@Icons.Material.Filled.ArrowBack"
+           Class="@Class">
+    @Text
+</MudButton>

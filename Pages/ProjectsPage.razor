@@ -1,16 +1,8 @@
 @page "/projects"
-@inject NavigationManager Navigation
-
 <PageTitle>Projects</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.Medium" Class="py-12">
-    <MudButton OnClick="@(() => Navigation.NavigateTo(""))"
-               Variant="Variant.Text"
-               Color="Color.Secondary"
-               StartIcon="@Icons.Material.Filled.ArrowBack"
-               Class="mb-4">
-        Back to Home
-    </MudButton>
+    <BackHomeButton />
 
     <MudPaper Class="presentation-section pa-8" Elevation="0">
         <MudStack Spacing="3">
@@ -27,27 +19,27 @@
                      Description="A 3d engine built with OpenGl, providing an integrated editor, real-time lighting and advanced BVH raytracing, scene serialization and much more!"
                      ImageSrc="images/editor-showcase.gif"
                      GithubHref="https://github.com/ldevillard/Devil-Engine"
-                     Href="projects/3d-engine"/>
+                     Href="projects/devil-engine"/>
 
         <ProjectCard Title="Chip-8 Emulator"
                      Categories="@(["Emulation", "Tools"])"
                      Description="A complete Chip-8 emulator providing hot reload, a simple editor, and a runtime debug view. Run any Chip-8 ROM on it!"
                      ImageSrc="images/chip-8.gif" 
                      GithubHref="https://github.com/ldevillard/CHIP8-Emulator"
-                     Href="projects/3d-engine"/>
+                     Href="projects/chip-8-emulator"/>
         
         <ProjectCard Title="DirectX 12 Viewer"
                      Categories="@(["Rendering"])"
                      Description="A DirectX 12 viewer built from scratch to learn and experiment with the Direct3D 12 graphics API!"
                      ImageSrc="images/bike-showcase.gif" 
                      GithubHref="https://github.com/ldevillard/DX12-Prototype"
-                     Href="projects/3d-engine"/>
+                     Href="projects/directx-12-viewer"/>
         
         <ProjectCard Title="Hollow Time"
                      Categories="@(["Web"])"
                      Description="A fully functional online Rubik's cube timer built with the Blazor web framework!"
                      ImageSrc="images/timer.png" 
                      GithubHref="https://github.com/ldevillard/HollowTime"
-                     Href="projects/3d-engine"/>
+                     Href="projects/hollow-time"/>
     </MudStack>
 </MudContainer>
