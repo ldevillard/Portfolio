@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
+using Portfolio.Components;
 
 namespace Portfolio.Pages.Projects;
 
@@ -46,6 +47,25 @@ public partial class EngineProjectPage : ComponentBase
             "Raytraced video showcase",
             "A video that shows a plane using orbital movements and comparing raytraced and rasterized renders.",
             "images/demo-plane.gif")
+    ];
+
+    private static readonly ProjectSourceLink[] Sources =
+    [
+        new(
+            "LearnOpenGL",
+            "https://learnopengl.com/"),
+        new(
+            "Raytracing in One Weekend",
+            "https://raytracing.github.io/books/RayTracingInOneWeekend.html"),
+        new(
+            "Sebastian Lague: Raytracing",
+            "https://www.youtube.com/watch?v=Qz0KTGYJtUk&t=1888s"),
+        new(
+            "Sebastian Lague: BVH Raytracing",
+            "https://www.youtube.com/watch?v=C1H4zIiCOaI"),
+        new(
+            "jbikker: How to build a BVH",
+            "https://jacco.ompf2.com/2022/04/18/how-to-build-a-bvh-part-2-faster-rays/")
     ];
 
     private sealed record FeatureItem(string Title, string Description, string Icon);

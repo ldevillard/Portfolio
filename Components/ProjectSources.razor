@@ -1,0 +1,24 @@
+<MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
+    <MudStack Spacing="3">
+        <MudText Typo="Typo.h5">Helpful sources and articles used for the project</MudText>
+
+        <MudGrid Spacing="2">
+            @foreach (ProjectSourceLink source in Sources)
+            {
+                <MudItem xs="12" md="6">
+                    <MudLink Href="@source.Href" Target="_blank" Underline="Underline.None">
+                        <MudPaper Class="px-3 py-2 rounded-lg h-100" Elevation="0" Outlined="true">
+                            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Spacing="1">
+                                <MudStack Spacing="0" Style="flex: 1 1 auto; min-width: 0;">
+                                    <MudText Typo="Typo.body1">@source.Text</MudText>
+                                </MudStack>
+
+                                <MudIcon Icon="@Icons.Material.Filled.ArrowOutward" Color="Color.Secondary" />
+                            </MudStack>
+                        </MudPaper>
+                    </MudLink>
+                </MudItem>
+            }
+        </MudGrid>
+    </MudStack>
+</MudPaper>
