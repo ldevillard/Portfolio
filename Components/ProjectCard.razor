@@ -1,75 +1,77 @@
-<MudLink Href="@GithubHref" Underline="Underline.None">
-<MudPaper Class="pa-4 rounded-lg" Elevation="0" Outlined="true">
-    <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Spacing="3">
-        <MudStack Spacing="1" AlignItems="AlignItems.Start" Style="flex: 1 1 auto; min-width: 0;">
-            @if (Categories.Count > 0)
-            {
-                <MudStack Row="true" Spacing="1" Style="flex-wrap: wrap;">
-                    @foreach (string category in Categories)
+<MudTooltip Text="View project" Placement="Placement.Top" Arrow="true" Color="Color.Default">
+    <MudLink Href="@GithubHref" Underline="Underline.None">
+        <MudPaper Class="pa-4 rounded-lg" Elevation="0" Outlined="true">
+            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Spacing="3">
+                <MudStack Spacing="1" AlignItems="AlignItems.Start" Style="flex: 1 1 auto; min-width: 0;">
+                    @if (Categories.Count > 0)
                     {
-                        <MudChip T="string"
-                                 Size="Size.Small"
-                                 Variant="Variant.Outlined"
-                                 Color="Color.Secondary">
-                            @category
-                        </MudChip>
+                        <MudStack Row="true" Spacing="1" Style="flex-wrap: wrap;">
+                            @foreach (string category in Categories)
+                            {
+                                <MudChip T="string"
+                                         Size="Size.Small"
+                                         Variant="Variant.Outlined"
+                                         Color="Color.Secondary">
+                                    @category
+                                </MudChip>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(GithubHref))
+                            {
+                                <MudChip T="string"
+                                         Href="@GithubHref"
+                                         Target="_blank"
+                                         Size="Size.Small"
+                                         Variant="Variant.Outlined"
+                                         Color="Color.Warning"
+                                         Icon="@Icons.Custom.Brands.GitHub">
+                                    Github
+                                </MudChip>
+                            }
+                        </MudStack>
                     }
-                    @if (!string.IsNullOrWhiteSpace(GithubHref))
+
+                    <MudText Typo="Typo.h6">@Title</MudText>
+
+                    <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                        <img src="@ImageSrc"
+                             alt="@Title"
+                             width="220"
+                             height="128"
+                             style="display: block; width: 100%; height: auto; object-fit: cover; border-radius: 8px;" />
+                    </MudHidden>
+
+                    <MudText Typo="Typo.body2">
+                        @Description
+                    </MudText>
+
+                    @if (!string.IsNullOrWhiteSpace(Href) || !string.IsNullOrWhiteSpace(GithubHref))
                     {
-                        <MudChip T="string"
-                                 Href="@GithubHref"
-                                 Target="_blank"
-                                 Size="Size.Small"
-                                 Variant="Variant.Outlined"
-                                 Color="Color.Warning"
-                                 Icon="@Icons.Custom.Brands.GitHub">
-                            Github
-                        </MudChip>
+                        <MudStack Row="true" Spacing="1" Class="mt-1" Style="flex-wrap: wrap;">
+                            @if (!string.IsNullOrWhiteSpace(Href))
+                            {
+                                <MudChip T="string"
+                                         Href="@Href"
+                                         Target="_blank"
+                                         Variant="Variant.Outlined"
+                                         Color="Color.Secondary"
+                                         Icon="@Icons.Material.Filled.ArrowOutward">
+                                    Project
+                                </MudChip>
+                            }
+                        </MudStack>
                     }
                 </MudStack>
-            }
 
-            <MudText Typo="Typo.h6">@Title</MudText>
-
-            <MudHidden Breakpoint="Breakpoint.MdAndUp">
-                <img src="@ImageSrc"
-                     alt="@Title"
-                     width="220"
-                     height="128"
-                     style="display: block; width: 100%; height: auto; object-fit: cover; border-radius: 8px;" />
-            </MudHidden>
-
-            <MudText Typo="Typo.body2">
-                @Description
-            </MudText>
-
-            @if (!string.IsNullOrWhiteSpace(Href) || !string.IsNullOrWhiteSpace(GithubHref))
-            {
-                <MudStack Row="true" Spacing="1" Class="mt-1" Style="flex-wrap: wrap;">
-                    @if (!string.IsNullOrWhiteSpace(Href))
-                    {
-                        <MudChip T="string"
-                                 Href="@Href"
-                                 Target="_blank"
-                                 Variant="Variant.Outlined"
-                                 Color="Color.Secondary"
-                                 Icon="@Icons.Material.Filled.ArrowOutward">
-                            Project
-                        </MudChip>
-                    }
-                </MudStack>
-            }
-        </MudStack>
-
-        <MudHidden Breakpoint="Breakpoint.SmAndDown">
-            <MudStack AlignItems="AlignItems.End" Justify="Justify.Center" Style="flex-basis: 220px; flex-shrink: 0;">
-                <img src="@ImageSrc"
-                     alt="@Title"
-                     width="220"
-                     height="128"
-                     style="display: block; object-fit: cover; border-radius: 8px;" />
+                <MudHidden Breakpoint="Breakpoint.SmAndDown">
+                    <MudStack AlignItems="AlignItems.End" Justify="Justify.Center" Style="flex-basis: 220px; flex-shrink: 0;">
+                        <img src="@ImageSrc"
+                             alt="@Title"
+                             width="220"
+                             height="128"
+                             style="display: block; object-fit: cover; border-radius: 8px;" />
+                    </MudStack>
+                </MudHidden>
             </MudStack>
-        </MudHidden>
-    </MudStack>
-</MudPaper>
-</MudLink>
+        </MudPaper>
+    </MudLink>
+</MudTooltip>
