@@ -3,16 +3,20 @@
    rel="noopener noreferrer">
     <MudPaper Class="px-4 py-3 rounded-lg" Elevation="0" Outlined="true">
         <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
-            <MudStack Spacing="0" AlignItems="AlignItems.Start">
-                @if (!string.IsNullOrWhiteSpace(Category))
+            <MudStack Spacing="1" AlignItems="AlignItems.Start">
+                @if (Categories.Count > 0)
                 {
-                    <MudChip T="string"
-                             Size="Size.Small"
-                             Variant="Variant.Outlined"
-                             Color="Color.Secondary"
-                             Class="mb-1">
-                        @Category
-                    </MudChip>
+                    <MudStack Row="true" Spacing="1" Style="flex-wrap: wrap;">
+                        @foreach (string category in Categories)
+                        {
+                            <MudChip T="string"
+                                     Size="Size.Small"
+                                     Variant="Variant.Outlined"
+                                     Color="Color.Secondary">
+                                @category
+                            </MudChip>
+                        }
+                    </MudStack>
                 }
 
                 <MudText Typo="Typo.subtitle2">@Title</MudText>
