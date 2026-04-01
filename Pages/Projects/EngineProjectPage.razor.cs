@@ -37,7 +37,7 @@ public partial class EngineProjectPage : ComponentBase
             "images/editor-showcase.gif"),
         new(
             "BVH debug view",
-            "A useful example of rendering-oriented debugging and engine-side visualization.",
+            "A useful example of rendering and engine visualization.",
             "images/bvh-showcase.gif"),
         new(
             "Raytraced frame",
