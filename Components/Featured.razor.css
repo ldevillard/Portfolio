@@ -1,11 +1,16 @@
+.featured-strip {
+    width: 100%;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
 .featured-cards-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
     width: 100%;
-    gap: 72px;
-    max-width: 960px;
-    margin: 0 auto;
+    gap: 32px;
 }
 
 @media (max-width: 959.98px) {
@@ -17,5 +22,6 @@
 @media (max-width: 599.98px) {
     .featured-cards-grid {
         grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
     }
 }
