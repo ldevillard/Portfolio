@@ -29,6 +29,26 @@ public partial class EngineProjectPage : ComponentBase
             Icons.Material.Filled.Save)
     ];
 
+    private static readonly ChallengeItem[] Challenges =
+    [
+        new(
+            "BVH on CPU and GPU",
+            "One of the main challenges was making the BVH work well on both the CPU and the GPU. What works nicely on the CPU is not always easy to use on the GPU, where the data needs to be simpler and more regular. To keep both sides consistent, the BVH was moved toward a more uniform indexed structure that can be sent to the GPU more easily without feeling like a completely separate system.",
+            Icons.Material.Filled.Memory),
+        new(
+            "Unlimited textures for ray tracing",
+            "Textures became another limitation as scenes grew more detailed. A system based on a small fixed number of texture slots does not scale well when many different materials are involved. Using bindless textures removed that constraint and made it much easier for materials to refer to textures freely, which helped the ray tracer scale to larger and more varied scenes.",
+            Icons.Material.Filled.Collections),
+        new(
+            "Scene serialization and pointer reconstruction",
+            "Saving a scene was not only about writing values into JSON. The harder part was rebuilding the links between objects when the scene was loaded again. This was handled by saving entities and components as structured data, recreating them from their type when loading, then reconnecting the references the engine needs at runtime.",
+            Icons.Material.Filled.Save),
+        new(
+            "Outline through occlusion",
+            "For selected objects, I wanted hidden objects to stay readable without showing the whole model through other geometry. Rendering the selection in a separate pass and blending only the final outline back onto the scene solved that cleanly. This way, when an object is behind another one, you only see its contour, which keeps the editor much clearer.",
+            Icons.Material.Filled.Gesture)
+    ];
+
     private static readonly ShowcaseItem[] ShowcaseItems =
     [
         new(
@@ -65,10 +85,16 @@ public partial class EngineProjectPage : ComponentBase
             "https://www.youtube.com/watch?v=C1H4zIiCOaI"),
         new(
             "jbikker: How to build a BVH",
-            "https://jacco.ompf2.com/2022/04/18/how-to-build-a-bvh-part-2-faster-rays/")
+            "https://jacco.ompf2.com/2022/04/18/how-to-build-a-bvh-part-2-faster-rays/"),
+        new(
+            "Inigo Quilez: Ray-Surface intersection functions",
+            "https://iquilezles.org/articles/intersectors/"
+        )
     ];
 
     private sealed record FeatureItem(string Title, string Description, string Icon);
+
+    private sealed record ChallengeItem(string Title, string Description, string Icon);
 
     private sealed record ShowcaseItem(string Title, string Description, string ImageSrc);
 }

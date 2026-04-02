@@ -99,6 +99,34 @@
                 </MudGrid>
             </MudStack>
         </MudPaper>
+
+        <MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
+            <MudStack Spacing="3">
+                <MudText Typo="Typo.h5">Challenges</MudText>
+
+                <MudText Typo="Typo.body1" Class="engine-project-body">
+                    Here are a few challenges that came up while building the engine. Several of them raised questions I had not really anticipated at the beginning, especially around data layout, runtime reconstruction, and the gap between a rendering feature working in isolation and behaving correctly inside an editor.
+                </MudText>
+
+                <MudGrid Spacing="2">
+                    @foreach (ChallengeItem challenge in Challenges)
+                    {
+                        <MudItem xs="12" md="6">
+                            <MudStack Spacing="2" Class="engine-project-feature">
+                                <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center">
+                                    <MudIcon Icon="@challenge.Icon" Color="Color.Warning" Size="Size.Medium" />
+                                <MudText Typo="Typo.h6">@challenge.Title</MudText>
+                                </MudStack>
+
+                                <MudText Typo="Typo.body2" Class="engine-project-body">
+                                    @challenge.Description
+                                </MudText>
+                            </MudStack>
+                        </MudItem>
+                    }
+                </MudGrid>
+            </MudStack>
+        </MudPaper>
         
         <MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
             <MudStack Spacing="3">
