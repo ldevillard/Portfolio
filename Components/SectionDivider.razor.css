@@ -1,0 +1,64 @@
+.section-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-divider-line {
+    flex: 1 1 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(226,212,190,0), rgba(226,212,190,0.42), rgba(226,212,190,0));
+}
+
+.section-divider-content {
+    flex: 0 1 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+    text-align: center;
+}
+
+.section-divider-label {
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(226,212,190,0.08);
+    border: 1px solid rgba(226,212,190,0.24);
+    color: rgba(236, 225, 209, 0.96);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 0 0 1px rgba(226,212,190,0.08);
+}
+
+.section-divider-caption {
+    color: rgba(226, 212, 190, 0.82);
+    font-size: clamp(0.72rem, 0.95vw, 0.9rem);
+    line-height: 1.6;
+    white-space: nowrap;
+}
+
+@media (max-width: 599.98px) {
+    .section-divider {
+        gap: 0.6rem;
+    }
+
+    .section-divider-content {
+        flex-basis: 320px;
+        gap: 0.35rem;
+    }
+
+    .section-divider-label {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.76rem;
+        letter-spacing: 0.06em;
+    }
+
+    .section-divider-caption {
+        font-size: 0.78rem;
+        line-height: 1.5;
+    }
+}
