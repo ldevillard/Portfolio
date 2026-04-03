@@ -15,33 +15,34 @@
         </MudPaper>
 
         <MudDivider Class="w-100"/>
+        <MudStack Spacing="4">
+            <ProjectCard Title="Devil Engine"
+                         Categories="@(["Engine", "Rendering", "Tools"])"
+                         Description="A personal C++ / OpenGL engine focused on rendering, editor tooling, scene authoring, and BVH-accelerated ray tracing."
+                         ImageSrc="images/editor-showcase.gif"
+                         GithubHref="https://github.com/ldevillard/Devil-Engine"
+                         Href="projects/devil-engine"/>
 
-        <ProjectCard Title="Devil Engine"
-                     Categories="@(["Engine", "Rendering", "Tools"])"
-                     Description="A personal C++ / OpenGL engine focused on rendering, editor tooling, scene authoring, and BVH-accelerated ray tracing."
-                     ImageSrc="images/editor-showcase.gif"
-                     GithubHref="https://github.com/ldevillard/Devil-Engine"
-                     Href="projects/devil-engine"/>
+            <ProjectCard Title="Chip-8 Emulator"
+                         Categories="@(["Emulation", "Tools"])"
+                         Description="A complete Chip-8 emulator providing hot reload, a simple editor, and a runtime debug view. Run any Chip-8 ROM on it!"
+                         ImageSrc="images/chip-8.gif"
+                         GithubHref="https://github.com/ldevillard/CHIP8-Emulator"
+                         Href="projects/chip-8-emulator"/>
 
-        <ProjectCard Title="Chip-8 Emulator"
-                     Categories="@(["Emulation", "Tools"])"
-                     Description="A complete Chip-8 emulator providing hot reload, a simple editor, and a runtime debug view. Run any Chip-8 ROM on it!"
-                     ImageSrc="images/chip-8.gif"
-                     GithubHref="https://github.com/ldevillard/CHIP8-Emulator"
-                     Href="projects/chip-8-emulator"/>
+            <ProjectCard Title="DirectX 12 Viewer"
+                         Categories="@(["Rendering"])"
+                         Description="A DirectX 12 viewer built from scratch to learn and experiment with the Direct3D 12 graphics API!"
+                         ImageSrc="images/bike-showcase.gif"
+                         GithubHref="https://github.com/ldevillard/DX12-Prototype"
+                         Href="projects/directx-12-viewer"/>
 
-        <ProjectCard Title="DirectX 12 Viewer"
-                     Categories="@(["Rendering"])"
-                     Description="A DirectX 12 viewer built from scratch to learn and experiment with the Direct3D 12 graphics API!"
-                     ImageSrc="images/bike-showcase.gif"
-                     GithubHref="https://github.com/ldevillard/DX12-Prototype"
-                     Href="projects/directx-12-viewer"/>
-
-        <ProjectCard Title="Hollow Time"
-                     Categories="@(["Web"])"
-                     Description="A fully functional online Rubik's cube timer built with the Blazor web framework!"
-                     ImageSrc="images/timer.png"
-                     GithubHref="https://github.com/ldevillard/HollowTime"
-                     Href="projects/hollow-time"/>
+            <ProjectCard Title="Hollow Time"
+                         Categories="@(["Web"])"
+                         Description="A fully functional online Rubik's cube timer built with the Blazor web framework!"
+                         ImageSrc="images/timer.png"
+                         GithubHref="https://github.com/ldevillard/HollowTime"
+                         Href="projects/hollow-time"/>
+        </MudStack>
     </MudStack>
 </MudContainer>
