@@ -1,8 +1,7 @@
 ﻿@page "/"
 
 <MudContainer MaxWidth="MaxWidth.Medium" Class="py-12">
-    <MudStack Spacing="8" AlignItems="AlignItems.Center">
-        <MudStack Spacing="4" Class="w-100" Style="max-width: 68rem;">
+    <MudStack Spacing="4">
             <MudPaper Class="presentation-section pa-8 pa-md-12" Elevation="0" Outlined="true">
                 <MudStack Spacing="3" AlignItems="AlignItems.Center">
                     <MudStack Row="true"
@@ -87,8 +86,8 @@
             <SectionDivider Label="Personal work"
                             Caption="A few areas I like to build and share." />
 
-            <MudGrid Spacing="4" Class="w-100 ma-0">
-                <MudItem xs="12" sm="6" md="4">
+            <div class="content-grid">
+                <div class="content-grid-item">
                     <MudLink Href="projects" Class="content-card-link" Underline="Underline.None">
                         <MudPaper Class="content-card pa-6 h-100" Elevation="0" Outlined="true">
                             <MudStack Spacing="0" Class="h-100">
@@ -102,9 +101,9 @@
                             </MudStack>
                         </MudPaper>
                     </MudLink>
-                </MudItem>
+                </div>
 
-                <MudItem xs="12" sm="6" md="4">
+                <div class="content-grid-item">
                     <MudLink Href="articles" Class="content-card-link" Underline="Underline.None">
                         <MudPaper Class="content-card pa-6 h-100" Elevation="0" Outlined="true">
                             <MudStack Spacing="0" Class="h-100">
@@ -118,9 +117,9 @@
                             </MudStack>
                         </MudPaper>
                     </MudLink>
-                </MudItem>
+                </div>
 
-                <MudItem xs="12" sm="6" md="4">
+                <div class="content-grid-item">
                     <MudLink Href="about" Class="content-card-link" Underline="Underline.None">
                         <MudPaper Class="content-card pa-6 h-100" Elevation="0" Outlined="true">
                             <MudStack Spacing="0" Class="h-100">
@@ -134,8 +133,7 @@
                             </MudStack>
                         </MudPaper>
                     </MudLink>
-                </MudItem>
-            </MudGrid>
-        </MudStack>
+                </div>
+            </div>
     </MudStack>
 </MudContainer>

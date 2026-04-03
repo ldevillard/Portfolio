@@ -19,6 +19,7 @@
     align-items: center;
     gap: 0.45rem;
     text-align: center;
+    min-width: 0;
 }
 
 .section-divider-label {
@@ -38,17 +39,26 @@
     color: rgba(226, 212, 190, 0.82);
     font-size: clamp(0.72rem, 0.95vw, 0.9rem);
     line-height: 1.6;
-    white-space: nowrap;
+    max-width: 100%;
+    white-space: normal;
+    text-wrap: balance;
 }
 
 @media (max-width: 599.98px) {
     .section-divider {
+        justify-content: center;
         gap: 0.6rem;
     }
 
     .section-divider-content {
-        flex-basis: 320px;
+        flex: 1 1 100%;
+        max-width: 320px;
         gap: 0.35rem;
+    }
+
+    .section-divider-line {
+        flex: 0 1 56px;
+        min-width: 24px;
     }
 
     .section-divider-label {
