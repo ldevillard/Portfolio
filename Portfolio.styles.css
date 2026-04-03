@@ -155,15 +155,9 @@
     }
 }
 /* /Pages/HomePage.razor.rz.scp.css */
-.home-section[b-yhalji4bj5] {
-    width: 78%;
-    margin: 0 auto;
-}
-
 .presentation-section[b-yhalji4bj5] {
     border-radius: 24px;
     background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-    border: 1px solid rgba(255,255,255,0.06);
 }
 
 .presentation-title[b-yhalji4bj5] {
@@ -175,26 +169,16 @@
     color: #E2D4BE;
 }
 
-.presentation-subtitle[b-yhalji4bj5] {
-    opacity: 0.92;
-    max-width: 700px;
-}
-
 .presentation-description[b-yhalji4bj5] {
     max-width: 720px;
     opacity: 0.82;
     line-height: 1.8;
+    text-align: justify;
 }
 
 .social-strip[b-yhalji4bj5] {
     border-radius: 20px;
     background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.home-content-grid[b-yhalji4bj5] {
-    width: 100%;
-    margin-top: 0;
 }
 
 .content-card[b-yhalji4bj5] {
@@ -203,7 +187,6 @@
     border-radius: 22px;
     min-height: 220px;
     background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
-    border: 1px solid rgba(255,255,255,0.05);
     transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, background 0.28s ease;
 }
 
@@ -252,10 +235,8 @@
 }
 
 .content-card-media[b-yhalji4bj5] {
-    margin-bottom: 1rem;
     overflow: hidden;
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 22px;
     background: rgba(255,255,255,0.03);
     transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
@@ -265,6 +246,7 @@
     height: 250px;
     object-fit: cover;
     display: block;
+    border-radius: inherit;
     transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), filter 0.45s ease;
 }
 
@@ -290,6 +272,7 @@
 .card-text[b-yhalji4bj5] {
     opacity: 0.82;
     line-height: 1.8;
+    text-align: justify;
     transition: opacity 0.28s ease, transform 0.28s ease;
 }
 
@@ -303,29 +286,14 @@
     height: 100%;
 }
 
-.presentation-header[b-yhalji4bj5] {
-    flex-wrap: wrap;
-}
-
 .profile-picture[b-yhalji4bj5] {
     width: 100px;
     height: 100px;
+    display: block;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid rgba(230, 212, 190, 0.85);
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.04);
-}
-
-.presentation-description a[b-yhalji4bj5] {
-    color: #E2D4BE;
-    font-weight: 500;
-    text-decoration: underline;
-}
-
-@media (max-width: 959.98px) {
-    .home-section[b-yhalji4bj5] {
-        width: 100%;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
