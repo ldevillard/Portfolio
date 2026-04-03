@@ -129,11 +129,11 @@
 
 .section-divider-caption[b-ziuzk6vll4] {
     color: rgba(226, 212, 190, 0.82);
-    font-size: clamp(0.72rem, 0.95vw, 0.9rem);
+    font-size: 0.9rem;
     line-height: 1.6;
     max-width: 100%;
     white-space: normal;
-    text-wrap: balance;
+    text-wrap: pretty;
 }
 
 @media (max-width: 599.98px) {
@@ -160,7 +160,6 @@
     }
 
     .section-divider-caption[b-ziuzk6vll4] {
-        font-size: 0.78rem;
         line-height: 1.5;
     }
 }
