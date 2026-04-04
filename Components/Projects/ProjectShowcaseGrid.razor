@@ -8,9 +8,11 @@
             {
                 <MudItem xs="12" md="6">
                     <MudStack Spacing="2" Class="project-visual-card">
-                        <img src="@showcase.ImageSrc"
-                             alt="@showcase.Title"
-                             class="project-image" />
+                        <MudLink Href="@showcase.ImageSrc" Target="_blank" Underline="Underline.None">
+                            <img src="@showcase.ImageSrc"
+                                 alt="@showcase.Title"
+                                 class="project-image" />
+                        </MudLink>
                         <MudText Typo="Typo.h6">@showcase.Title</MudText>
                         <MudText Typo="Typo.body2">@showcase.Description</MudText>
                     </MudStack>
