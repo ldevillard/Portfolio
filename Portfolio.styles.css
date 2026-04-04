@@ -287,6 +287,35 @@
         transition: none;
     }
 }
+/* /Pages/Projects/Chip8EmulatorProjectPage.razor.rz.scp.css */
+.engine-project-links[b-f3jwxgqnya] {
+    flex-wrap: wrap;
+}
+
+.engine-project-feature[b-f3jwxgqnya] {
+    height: 100%;
+    padding: 1rem 1.25rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.engine-project-list-row[b-f3jwxgqnya] {
+    align-items: flex-start;
+}
+
+.engine-project-visual[b-f3jwxgqnya] {
+    height: 100%;
+}
+
+.engine-project-image[b-f3jwxgqnya] {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
 /* /Pages/Projects/EngineProjectPage.razor.rz.scp.css */
 .engine-project-links[b-oe70ytkkrc] {
     flex-wrap: wrap;
