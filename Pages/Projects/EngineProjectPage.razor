@@ -116,8 +116,13 @@
                 </MudText>
                 <MudDivider/>
                 <MudGrid Spacing="2">
-                    @foreach (ChallengeItem challenge in Challenges)
+                    @for (int i = 0; i < _challengeViews.Length; i++)
                     {
+                        int index = i;
+                        var challenge = _challengeViews[index];
+                        string[] restLines = challenge.RestLines ?? Array.Empty<string>();
+                        bool isExpanded = _challengeExpanded.Length > index && _challengeExpanded[index];
+
                         <MudItem xs="12" md="6" Class="mt-2">
                             <MudStack Spacing="2" Class="engine-project-feature">
                                 <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center">
@@ -125,11 +130,29 @@
                                 <MudText Typo="Typo.h6">@challenge.Title</MudText>
                                 </MudStack>
 
-                                @foreach (string description in challenge.Description)
+                                @if (restLines.Length > 0)
                                 {
-                                    <MudText Typo="Typo.body1">
-                                        @description
-                                    </MudText>
+                                    <MudStack Spacing="0" AlignItems="AlignItems.Start">
+                                        <MudText Typo="Typo.body1">@challenge.FirstLine</MudText>
+                                        <MudCollapse Expanded="@isExpanded">
+
+                                            @foreach (string line in restLines)
+                                            {
+                                                <MudText Typo="Typo.body1" Class="mt-2">@line</MudText>
+                                            }
+
+                                        </MudCollapse>
+                                        <MudButton Variant="Variant.Text"
+                                                   Size="Size.Small"
+                                                   Class="mt-2"
+                                                   Style="margin-left: -5px"
+                                                   Color="Color.Secondary"
+                                                   OnClick="@(() => ToggleChallenge(index))"
+                                                   EndIcon="@(isExpanded ? Icons.Material.Filled.ExpandLess : Icons.Material.Filled.ExpandMore)">
+                                            @GetToggleLabel(index)
+                                        </MudButton>
+                                    </MudStack>
+
                                 }
                             </MudStack>
                         </MudItem>
