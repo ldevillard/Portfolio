@@ -1,15 +1,14 @@
+@page "/projects/chip-8-emulator"
 
-@page "/projects/devil-engine"
-
-<PageTitle>Devil Engine</PageTitle>
+<PageTitle>Chip-8 Emulator</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.Medium" Class="py-12">
     <BackHomeButton Text="Back to projects" Href="projects" Class="mb-4" />
 
     <MudStack Spacing="4">
-        <ProjectIntro Title="Devil Engine"
-                      Description="A personal C++ / OpenGL engine focused on rendering, editor tooling, scene authoring, and BVH-accelerated ray tracing."
-                      ImageSrc="images/editor-showcase.gif" />
+        <ProjectIntro Title="Chip-8 Emulator"
+                      Description="Placeholder project description for the Chip-8 emulator."
+                      ImageSrc="images/chip-8.gif" />
 
         <MudPaper Class="pa-3 rounded-lg" Elevation="0" Outlined="true">
             <MudStack Row="true"
@@ -27,7 +26,7 @@
                 </MudChip>
 
                 <MudChip T="string"
-                         Href="@MousePickingArticleUrl"
+                         Href="@ArticleUrl"
                          Target="_blank"
                          Variant="Variant.Outlined"
                          Color="Color.Secondary"
@@ -36,7 +35,7 @@
                 </MudChip>
                     
                 <MudChip T="string"
-                         Href="https://github.com/ldevillard/Devil-Engine/releases/tag/v0.1"
+                         Href="@DemoUrl"
                          Target="_blank"
                          Variant="Variant.Outlined"
                          Color="Color.Success"
@@ -47,13 +46,13 @@
                 <MudChip T="string"
                          Variant="Variant.Outlined"
                          Color="Color.Warning">
-                    OpenGL 4.5
+                    Placeholder Tech 1
                 </MudChip>
 
                 <MudChip T="string"
                          Variant="Variant.Outlined"
                          Color="Color.Warning">
-                    C++
+                    Placeholder Tech 2
                 </MudChip>
             </MudStack>
         </MudPaper>
@@ -66,20 +65,20 @@
                 
                 <MudStack Spacing="2">
                     <MudText Typo="Typo.body1" Class="mt-3" Align="Align.Left">
-                        Devil Engine is a personal rendering engine project built from a strong interest in real-time graphics and a desire to understand how the different parts of an engine fit together.
+                        Placeholder paragraph summarizing the Chip-8 emulator project and its overall goals.
                     </MudText>
 
                     <MudText Typo="Typo.body1" Class="mt-3" Align="Align.Left">
-                        The goal was not only to build a renderer, but to explore the full workflow around it: scene editing, transform gizmos, object inspection, save and load systems, and an integrated BVH-based ray tracer for more advanced rendering experiments.
+                        Placeholder paragraph describing design choices, emulator workflow, and development focus areas.
                     </MudText>
 
                     <MudText Typo="Typo.body1" Class="mt-3" Align="Align.Left">
-                        This project began as a way to strengthen my knowledge of 3D rendering. It has since become an experimental playground where I can explore new techniques, iterate on ideas, and continue expanding my graphics programming skills.
+                        Placeholder paragraph about learnings, experimentation opportunities, and future improvements.
                     </MudText>
                     <MudPaper Class="pa-3 rounded-lg mt-3" Elevation="0" Outlined="true">
                         <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="0">
                             <MudText Typo="Typo.body2" Color="Color.Secondary" Align="Align.Left">
-                                Next step: I would like to use the engine as a base for future experiments such as fluid simulation.
+                                Placeholder next step to highlight a planned improvement or experiment for this emulator.
                             </MudText>
                             <MudIcon Icon="@Icons.Material.Filled.Lightbulb" Color="Color.Warning" Size="Size.Small" />
                         </MudStack>
@@ -112,7 +111,7 @@
                 <MudText Typo="Typo.h5">Challenges</MudText>
                 <MudDivider/>
                 <MudText Typo="Typo.body1" Color="Color.Secondary">
-                    Here are a few challenges that came up while building the engine. Several of them raised questions I had not really anticipated at the beginning, especially around data layout, runtime reconstruction, and the gap between a rendering feature working in isolation and behaving correctly inside an editor.
+                    Placeholder overview of technical or design challenges encountered while building this emulator.
                 </MudText>
                 <MudDivider/>
                 <MudGrid Spacing="4">

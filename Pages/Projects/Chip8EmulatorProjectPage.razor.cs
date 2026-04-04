@@ -1,0 +1,153 @@
+using Microsoft.AspNetCore.Components;
+using MudBlazor;
+using Portfolio.Components.Projects;
+
+namespace Portfolio.Pages.Projects;
+
+public partial class Chip8EmulatorProjectPage : ComponentBase
+{
+    private const string RepositoryUrl = "https://github.com/ldevillard/CHIP8-Emulator";
+    private const string ArticleUrl = "https://example.com/chip8-article-placeholder";
+    private const string DemoUrl = "https://example.com/chip8-demo-placeholder";
+
+    private bool[] _challengeExpanded = Array.Empty<bool>();
+    private ChallengeView[] _challengeViews = Array.Empty<ChallengeView>();
+
+    private static readonly FeatureItem[] Features =
+    [
+        new(
+            "Placeholder feature title 1",
+            "Placeholder feature description detailing emulator capability or tool.",
+            Icons.Material.Filled.LightMode),
+        new(
+            "Placeholder feature title 2",
+            "Placeholder feature description exploring UX, debugging, or tooling aspects.",
+            Icons.Material.Filled.Tune),
+        new(
+            "Placeholder feature title 3",
+            "Placeholder feature description covering performance, accuracy, or compatibility.",
+            Icons.Material.Filled.AutoFixHigh),
+        new(
+            "Placeholder feature title 4",
+            "Placeholder feature description about loading ROMs, editing, or visualization.",
+            Icons.Material.Filled.Save)
+    ];
+
+    private static readonly ChallengeItem[] Challenges =
+    [
+        new(
+            "Placeholder challenge 1",
+            ["Placeholder challenge first line.",
+                "Placeholder challenge additional detail line.",
+                "Placeholder challenge conclusion or solution summary."],
+            Icons.Material.Filled.Memory),
+        new(
+            "Placeholder challenge 2",
+            ["Placeholder challenge first line.",
+                "Placeholder challenge additional detail line.",
+                "Placeholder challenge conclusion or solution summary."],
+            Icons.Material.Filled.Collections),
+        new(
+            "Placeholder challenge 3", 
+            ["Placeholder challenge first line.",
+                "Placeholder challenge additional detail line.",
+                "Placeholder challenge conclusion or solution summary."],
+            Icons.Material.Filled.Save),
+        new(
+            "Placeholder challenge 4",
+            ["Placeholder challenge first line.",
+                "Placeholder challenge additional detail line.",
+                "Placeholder challenge conclusion or solution summary."],
+            Icons.Material.Filled.Gesture)
+    ];
+
+    private static readonly ShowcaseItem[] ShowcaseItems =
+    [
+        new(
+            "Placeholder visual 1",
+            "Placeholder description for first visual.",
+            "images/chip-8.gif"),
+        new(
+            "Placeholder visual 2",
+            "Placeholder description for second visual.",
+            "images/chip-8.gif"),
+        new(
+            "Placeholder visual 3",
+            "Placeholder description for third visual.",
+            "images/chip-8.gif"),
+        new(
+            "Placeholder visual 4",
+            "Placeholder description for fourth visual.",
+            "images/chip-8.gif")
+    ];
+
+    private static readonly ProjectSourceLink[] Sources =
+    [
+        new(
+            "Placeholder source 1",
+            "https://example.com/source-1"),
+        new(
+            "Placeholder source 2",
+            "https://example.com/source-2"),
+        new(
+            "Placeholder source 3",
+            "https://example.com/source-3"),
+        new(
+            "Placeholder source 4",
+            "https://example.com/source-4")
+    ];
+
+    private sealed record FeatureItem(string Title, string Description, string Icon);
+
+    private sealed record ChallengeItem(string Title, string[] Description, string Icon);
+
+    private sealed record ShowcaseItem(string Title, string Description, string ImageSrc);
+
+    protected override void OnInitialized()
+    {
+        _challengeViews = Challenges
+            .Select(c =>
+            {
+                string firstLine = (c.Description != null && c.Description.Length > 0) ? c.Description[0] : string.Empty;
+                string[] restLines = (c.Description != null && c.Description.Length > 1) ? c.Description[1..] : Array.Empty<string>();
+                return new ChallengeView(c.Title, c.Icon, firstLine, restLines);
+            })
+            .ToArray();
+
+        _challengeExpanded = new bool[_challengeViews.Length];
+    }
+
+    private void ToggleChallenge(int index)
+    {
+        EnsureExpandedSize();
+
+        if ((uint)index >= _challengeExpanded.Length)
+        {
+            return;
+        }
+
+        _challengeExpanded[index] = !_challengeExpanded[index];
+        StateHasChanged();
+    }
+
+    private string GetToggleLabel(int index)
+    {
+        EnsureExpandedSize();
+
+        return (uint)index < _challengeExpanded.Length && _challengeExpanded[index]
+            ? "Less details"
+            : "More details";
+    }
+
+    private int EnsureExpandedSize()
+    {
+        if (_challengeExpanded == null || _challengeExpanded.Length != _challengeViews.Length)
+        {
+            _challengeExpanded = new bool[_challengeViews.Length];
+        }
+
+        return _challengeExpanded.Length;
+    }
+
+    private sealed record ChallengeView(string Title, string Icon, string FirstLine, string[] RestLines);
+}
