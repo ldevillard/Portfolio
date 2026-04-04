@@ -14,7 +14,6 @@ public partial class DirectX12ViewerProjectPage : ComponentBase
     [
         new("GitHub repository", Color.Secondary, Icons.Custom.Brands.GitHub, RepositoryUrl),
         new("Related article", Color.Secondary, Icons.Material.Filled.Article, ArticleUrl),
-        new("Try it out", Color.Success, Icons.Material.Filled.ArrowOutward, DemoUrl)
     ];
 
     private static readonly ProjectChip[] TechChips =
