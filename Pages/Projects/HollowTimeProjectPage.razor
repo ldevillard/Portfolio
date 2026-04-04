@@ -1,0 +1,31 @@
+@page "/projects/hollow-time"
+
+<PageTitle>Hollow Time</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Medium" Class="py-12">
+    <BackHomeButton Text="Back to projects" Href="projects" Class="mb-4" />
+
+    <MudStack Spacing="4">
+        <ProjectIntro Title="Hollow Time"
+                      Description="Placeholder project description for the Hollow Time web timer."
+                      ImageSrc="images/timer.png" />
+
+        <ProjectLinksBar Links="@LinkChips" Tags="@TechChips" />
+
+        <ProjectSummaryCard Title="Project Summary and Motivation"
+                            Paragraphs="@SummaryParagraphs"
+                            NextStep="@NextStep" />
+
+        <ProjectFeaturesGrid Features="@Features" />
+
+        <ProjectChallenges Title="Challenges"
+                           IntroText="@ChallengesIntro"
+                           Challenges="@Challenges" />
+
+        <ProjectShowcaseGrid ShowcaseItems="@ShowcaseItems" />
+
+        <GithubFooter Href="@RepositoryUrl" />
+
+        <ProjectSources Sources="@Sources" />
+    </MudStack>
+</MudContainer>
