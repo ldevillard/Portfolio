@@ -2,11 +2,6 @@
     flex-wrap: wrap;
 }
 
-.engine-project-body {
-    opacity: 0.82;
-    line-height: 1.75;
-}
-
 .engine-project-feature {
     height: 100%;
     padding: 1rem 1.25rem;

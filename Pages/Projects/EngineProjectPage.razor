@@ -11,71 +11,78 @@
                       Description="A personal C++ / OpenGL engine focused on rendering, editor tooling, scene authoring, and BVH-accelerated ray tracing."
                       ImageSrc="images/editor-showcase.gif" />
 
+        <MudPaper Class="pa-3 rounded-lg" Elevation="0" Outlined="true">
+            <MudStack Row="true"
+                      Spacing="1"
+                      AlignItems="AlignItems.Center"
+                      Justify="Justify.FlexStart"
+                      Style="flex-wrap: wrap;">
+                <MudChip T="string"
+                         Href="@RepositoryUrl"
+                         Target="_blank"
+                         Variant="Variant.Outlined"
+                         Color="Color.Secondary"
+                         Icon="@Icons.Custom.Brands.GitHub">
+                    GitHub repository
+                </MudChip>
+
+                <MudChip T="string"
+                         Href="@MousePickingArticleUrl"
+                         Target="_blank"
+                         Variant="Variant.Outlined"
+                         Color="Color.Secondary"
+                         Icon="@Icons.Material.Filled.Article">
+                    Related article
+                </MudChip>
+                    
+                <MudChip T="string"
+                         Href="https://github.com/ldevillard/Devil-Engine/releases/tag/v0.1"
+                         Target="_blank"
+                         Variant="Variant.Outlined"
+                         Color="Color.Success"
+                         Icon="@Icons.Material.Filled.ArrowOutward">
+                    Try it out
+                </MudChip>
+
+                <MudChip T="string"
+                         Variant="Variant.Outlined"
+                         Color="Color.Warning">
+                    OpenGL 4.5
+                </MudChip>
+
+                <MudChip T="string"
+                         Variant="Variant.Outlined"
+                         Color="Color.Warning">
+                    C++
+                </MudChip>
+            </MudStack>
+        </MudPaper>
+        
         <MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
             <MudStack Spacing="3">
-                <MudStack Row="true"
-                          Spacing="1"
-                          AlignItems="AlignItems.Center"
-                          Justify="Justify.FlexStart"
-                          Style="flex-wrap: wrap;">
-                    <MudChip T="string"
-                             Href="@RepositoryUrl"
-                             Target="_blank"
-                             Variant="Variant.Outlined"
-                             Color="Color.Secondary"
-                             Icon="@Icons.Custom.Brands.GitHub">
-                        GitHub repository
-                    </MudChip>
-
-                    <MudChip T="string"
-                             Href="@MousePickingArticleUrl"
-                             Target="_blank"
-                             Variant="Variant.Outlined"
-                             Color="Color.Secondary"
-                             Icon="@Icons.Material.Filled.Article">
-                        Related article
-                    </MudChip>
-                    
-                    <MudChip T="string"
-                             Href="https://github.com/ldevillard/Devil-Engine/releases/tag/v0.1"
-                             Target="_blank"
-                             Variant="Variant.Outlined"
-                             Color="Color.Success"
-                             Icon="@Icons.Material.Filled.ArrowOutward">
-                        Try it out
-                    </MudChip>
-
-                    <MudChip T="string"
-                             Variant="Variant.Outlined"
-                             Color="Color.Warning">
-                        OpenGL 4.5
-                    </MudChip>
-
-                    <MudChip T="string"
-                             Variant="Variant.Outlined"
-                             Color="Color.Warning">
-                        C++
-                    </MudChip>
-                </MudStack>
-
                 <MudText Typo="Typo.h5">Project Summary and Motivation</MudText>
 
+                <MudDivider/>
+                
                 <MudStack Spacing="2">
-                    <MudText Typo="Typo.body1" Class="engine-project-body" Align="Align.Justify">
+                    <MudText Typo="Typo.body1" Class="mt-3" Align="Align.Left">
                         Devil Engine is a personal rendering engine project built from a strong interest in real-time graphics and a desire to understand how the different parts of an engine fit together.
                     </MudText>
 
-                    <MudText Typo="Typo.body1" Class="engine-project-body" Align="Align.Justify">
+                    <MudText Typo="Typo.body1" Class="mt-3" Align="Align.Left">
                         The goal was not only to build a renderer, but to explore the full workflow around it: scene editing, transform gizmos, object inspection, save and load systems, and an integrated BVH-based ray tracer for more advanced rendering experiments.
                     </MudText>
 
-                    <MudText Typo="Typo.body1" Class="engine-project-body" Align="Align.Justify">
+                    <MudText Typo="Typo.body1" Class="mt-3" Align="Align.Left">
                         This project began as a way to strengthen my knowledge of 3D rendering. It has since become an experimental playground where I can explore new techniques, iterate on ideas, and continue expanding my graphics programming skills.
                     </MudText>
-                    <MudPaper Class="pa-3 rounded-lg" Elevation="0" Outlined="true">
-                        <MudText Typo="Typo.body2" Class="engine-project-body" Align="Align.Justify">
-                            Next step: I would like to use the engine as a base for future experiments such as fluid simulation.
-                        </MudText>
+                    <MudPaper Class="pa-3 rounded-lg mt-3" Elevation="0" Outlined="true">
+                        <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="0">
+                            <MudText Typo="Typo.body2" Color="Color.Secondary" Align="Align.Left">
+                                Next step: I would like to use the engine as a base for future experiments such as fluid simulation.
+                            </MudText>
+                            <MudIcon Icon="@Icons.Material.Filled.Lightbulb" Color="Color.Warning" Size="Size.Small" />
+                        </MudStack>
                     </MudPaper>
                 </MudStack>
             </MudStack>
@@ -84,15 +91,15 @@
         <MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
             <MudStack Spacing="3">
                 <MudText Typo="Typo.h5">Main Features</MudText>
+                <MudDivider/>
                 <MudGrid Spacing="2">
                     @foreach (FeatureItem feature in Features)
                     {
-                        <MudItem xs="12" md="6">
-                        <br/>
+                        <MudItem xs="12" md="6" Class="mt-2">
                             <MudStack Spacing="2" Class="engine-project-feature">
                                 <MudIcon Icon="@feature.Icon" Color="Color.Warning" Size="Size.Large" />
                                 <MudText Typo="Typo.h6">@feature.Title</MudText>
-                                <MudText Typo="Typo.body2" Class="engine-project-body">@feature.Description</MudText>
+                                <MudText Typo="Typo.body1">@feature.Description</MudText>
                             </MudStack>
                         </MudItem>
                     }
@@ -103,24 +110,27 @@
         <MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
             <MudStack Spacing="3">
                 <MudText Typo="Typo.h5">Challenges</MudText>
-
-                <MudText Typo="Typo.body1" Class="engine-project-body">
+                <MudDivider/>
+                <MudText Typo="Typo.body1">
                     Here are a few challenges that came up while building the engine. Several of them raised questions I had not really anticipated at the beginning, especially around data layout, runtime reconstruction, and the gap between a rendering feature working in isolation and behaving correctly inside an editor.
                 </MudText>
-
+                <MudDivider/>
                 <MudGrid Spacing="2">
                     @foreach (ChallengeItem challenge in Challenges)
                     {
-                        <MudItem xs="12" md="6">
+                        <MudItem xs="12" md="6" Class="mt-2">
                             <MudStack Spacing="2" Class="engine-project-feature">
                                 <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center">
                                     <MudIcon Icon="@challenge.Icon" Color="Color.Warning" Size="Size.Medium" />
                                 <MudText Typo="Typo.h6">@challenge.Title</MudText>
                                 </MudStack>
 
-                                <MudText Typo="Typo.body2" Class="engine-project-body">
-                                    @challenge.Description
-                                </MudText>
+                                @foreach (string description in challenge.Description)
+                                {
+                                    <MudText Typo="Typo.body1">
+                                        @description
+                                    </MudText>
+                                }
                             </MudStack>
                         </MudItem>
                     }
@@ -131,6 +141,7 @@
         <MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
             <MudStack Spacing="3">
                 <MudText Typo="Typo.h5">Selected Visuals</MudText>
+                <MudDivider/>
 
         <MudGrid Spacing="2">
             @foreach (ShowcaseItem showcase in ShowcaseItems)
@@ -141,7 +152,7 @@
                              alt="@showcase.Title"
                              class="engine-project-image" />
                                 <MudText Typo="Typo.h6">@showcase.Title</MudText>
-                                <MudText Typo="Typo.body2" Class="engine-project-body">@showcase.Description</MudText>
+                                <MudText Typo="Typo.body2">@showcase.Description</MudText>
                             </MudStack>
                         </MudItem>
                     }
