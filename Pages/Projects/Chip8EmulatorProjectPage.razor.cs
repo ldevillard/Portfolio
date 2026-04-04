@@ -10,10 +10,31 @@ public partial class Chip8EmulatorProjectPage : ComponentBase
     private const string ArticleUrl = "https://example.com/chip8-article-placeholder";
     private const string DemoUrl = "https://example.com/chip8-demo-placeholder";
 
-    private bool[] _challengeExpanded = Array.Empty<bool>();
-    private ChallengeView[] _challengeViews = Array.Empty<ChallengeView>();
+    private static readonly ProjectChip[] LinkChips =
+    [
+        new("GitHub repository", Color.Secondary, Icons.Custom.Brands.GitHub, RepositoryUrl),
+        new("Related article", Color.Secondary, Icons.Material.Filled.Article, ArticleUrl),
+        new("Try it out", Color.Success, Icons.Material.Filled.ArrowOutward, DemoUrl)
+    ];
 
-    private static readonly FeatureItem[] Features =
+    private static readonly ProjectChip[] TechChips =
+    [
+        new("Placeholder Tech 1", Color.Warning),
+        new("Placeholder Tech 2", Color.Warning)
+    ];
+
+    private static readonly string[] SummaryParagraphs =
+    [
+        "Placeholder paragraph summarizing the Chip-8 emulator project and its overall goals.",
+        "Placeholder paragraph describing design choices, emulator workflow, and development focus areas.",
+        "Placeholder paragraph about learnings, experimentation opportunities, and future improvements."
+    ];
+
+    private const string NextStep = "Placeholder next step to highlight a planned improvement or experiment for this emulator.";
+
+    private const string ChallengesIntro = "Placeholder overview of technical or design challenges encountered while building this emulator.";
+
+    private static readonly ProjectFeature[] Features =
     [
         new(
             "Placeholder feature title 1",
@@ -33,7 +54,7 @@ public partial class Chip8EmulatorProjectPage : ComponentBase
             Icons.Material.Filled.Save)
     ];
 
-    private static readonly ChallengeItem[] Challenges =
+    private static readonly ProjectChallenge[] Challenges =
     [
         new(
             "Placeholder challenge 1",
@@ -61,7 +82,7 @@ public partial class Chip8EmulatorProjectPage : ComponentBase
             Icons.Material.Filled.Gesture)
     ];
 
-    private static readonly ShowcaseItem[] ShowcaseItems =
+    private static readonly ProjectShowcase[] ShowcaseItems =
     [
         new(
             "Placeholder visual 1",
@@ -96,58 +117,4 @@ public partial class Chip8EmulatorProjectPage : ComponentBase
             "Placeholder source 4",
             "https://example.com/source-4")
     ];
-
-    private sealed record FeatureItem(string Title, string Description, string Icon);
-
-    private sealed record ChallengeItem(string Title, string[] Description, string Icon);
-
-    private sealed record ShowcaseItem(string Title, string Description, string ImageSrc);
-
-    protected override void OnInitialized()
-    {
-        _challengeViews = Challenges
-            .Select(c =>
-            {
-                string firstLine = (c.Description != null && c.Description.Length > 0) ? c.Description[0] : string.Empty;
-                string[] restLines = (c.Description != null && c.Description.Length > 1) ? c.Description[1..] : Array.Empty<string>();
-                return new ChallengeView(c.Title, c.Icon, firstLine, restLines);
-            })
-            .ToArray();
-
-        _challengeExpanded = new bool[_challengeViews.Length];
-    }
-
-    private void ToggleChallenge(int index)
-    {
-        EnsureExpandedSize();
-
-        if ((uint)index >= _challengeExpanded.Length)
-        {
-            return;
-        }
-
-        _challengeExpanded[index] = !_challengeExpanded[index];
-        StateHasChanged();
-    }
-
-    private string GetToggleLabel(int index)
-    {
-        EnsureExpandedSize();
-
-        return (uint)index < _challengeExpanded.Length && _challengeExpanded[index]
-            ? "Less details"
-            : "More details";
-    }
-
-    private int EnsureExpandedSize()
-    {
-        if (_challengeExpanded == null || _challengeExpanded.Length != _challengeViews.Length)
-        {
-            _challengeExpanded = new bool[_challengeViews.Length];
-        }
-
-        return _challengeExpanded.Length;
-    }
-
-    private sealed record ChallengeView(string Title, string Icon, string FirstLine, string[] RestLines);
 }

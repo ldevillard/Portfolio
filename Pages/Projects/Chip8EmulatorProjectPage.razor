@@ -10,177 +10,19 @@
                       Description="Placeholder project description for the Chip-8 emulator."
                       ImageSrc="images/chip-8.gif" />
 
-        <MudPaper Class="pa-3 rounded-lg" Elevation="0" Outlined="true">
-            <MudStack Row="true"
-                      Spacing="1"
-                      AlignItems="AlignItems.Center"
-                      Justify="Justify.FlexStart"
-                      Style="flex-wrap: wrap;">
-                <MudChip T="string"
-                         Href="@RepositoryUrl"
-                         Target="_blank"
-                         Variant="Variant.Outlined"
-                         Color="Color.Secondary"
-                         Icon="@Icons.Custom.Brands.GitHub">
-                    GitHub repository
-                </MudChip>
+        <ProjectLinksBar Links="@LinkChips" Tags="@TechChips" />
 
-                <MudChip T="string"
-                         Href="@ArticleUrl"
-                         Target="_blank"
-                         Variant="Variant.Outlined"
-                         Color="Color.Secondary"
-                         Icon="@Icons.Material.Filled.Article">
-                    Related article
-                </MudChip>
-                    
-                <MudChip T="string"
-                         Href="@DemoUrl"
-                         Target="_blank"
-                         Variant="Variant.Outlined"
-                         Color="Color.Success"
-                         Icon="@Icons.Material.Filled.ArrowOutward">
-                    Try it out
-                </MudChip>
+        <ProjectSummaryCard Title="Project Summary and Motivation"
+                            Paragraphs="@SummaryParagraphs"
+                            NextStep="@NextStep" />
 
-                <MudChip T="string"
-                         Variant="Variant.Outlined"
-                         Color="Color.Warning">
-                    Placeholder Tech 1
-                </MudChip>
+        <ProjectFeaturesGrid Features="@Features" />
 
-                <MudChip T="string"
-                         Variant="Variant.Outlined"
-                         Color="Color.Warning">
-                    Placeholder Tech 2
-                </MudChip>
-            </MudStack>
-        </MudPaper>
+        <ProjectChallenges Title="Challenges"
+                           IntroText="@ChallengesIntro"
+                           Challenges="@Challenges" />
         
-        <MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
-            <MudStack Spacing="3">
-                <MudText Typo="Typo.h5">Project Summary and Motivation</MudText>
-
-                <MudDivider/>
-                
-                <MudStack Spacing="2">
-                    <MudText Typo="Typo.body1" Class="mt-3" Align="Align.Left">
-                        Placeholder paragraph summarizing the Chip-8 emulator project and its overall goals.
-                    </MudText>
-
-                    <MudText Typo="Typo.body1" Class="mt-3" Align="Align.Left">
-                        Placeholder paragraph describing design choices, emulator workflow, and development focus areas.
-                    </MudText>
-
-                    <MudText Typo="Typo.body1" Class="mt-3" Align="Align.Left">
-                        Placeholder paragraph about learnings, experimentation opportunities, and future improvements.
-                    </MudText>
-                    <MudPaper Class="pa-3 rounded-lg mt-3" Elevation="0" Outlined="true">
-                        <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="0">
-                            <MudText Typo="Typo.body2" Color="Color.Secondary" Align="Align.Left">
-                                Placeholder next step to highlight a planned improvement or experiment for this emulator.
-                            </MudText>
-                            <MudIcon Icon="@Icons.Material.Filled.Lightbulb" Color="Color.Warning" Size="Size.Small" />
-                        </MudStack>
-                    </MudPaper>
-                </MudStack>
-            </MudStack>
-        </MudPaper>
-
-        <MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
-            <MudStack Spacing="3">
-                <MudText Typo="Typo.h5">Main Features</MudText>
-                <MudDivider/>
-                <MudGrid Spacing="4">
-                    @foreach (FeatureItem feature in Features)
-                    {
-                        <MudItem xs="12" md="6" Class="mt-2">
-                            <MudStack Spacing="2" Class="engine-project-feature">
-                                <MudIcon Icon="@feature.Icon" Color="Color.Warning" Size="Size.Large" />
-                                <MudText Typo="Typo.h6">@feature.Title</MudText>
-                                <MudText Typo="Typo.body1">@feature.Description</MudText>
-                            </MudStack>
-                        </MudItem>
-                    }
-                </MudGrid>
-            </MudStack>
-        </MudPaper>
-
-        <MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
-            <MudStack Spacing="3">
-                <MudText Typo="Typo.h5">Challenges</MudText>
-                <MudDivider/>
-                <MudText Typo="Typo.body1" Color="Color.Secondary">
-                    Placeholder overview of technical or design challenges encountered while building this emulator.
-                </MudText>
-                <MudDivider/>
-                <MudGrid Spacing="4">
-                    @for (int i = 0; i < _challengeViews.Length; i++)
-                    {
-                        int index = i;
-                        var challenge = _challengeViews[index];
-                        string[] restLines = challenge.RestLines ?? Array.Empty<string>();
-                        bool isExpanded = _challengeExpanded.Length > index && _challengeExpanded[index];
-
-                        <MudItem xs="12" md="6" Class="mt-2">
-                            <MudStack Spacing="2" Class="engine-project-feature">
-                                <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center">
-                                    <MudIcon Icon="@challenge.Icon" Color="Color.Warning" Size="Size.Medium" />
-                                <MudText Typo="Typo.h6" Style="line-height: 100%">@challenge.Title</MudText>
-                                </MudStack>
-
-                                @if (restLines.Length > 0)
-                                {
-                                    <MudStack Spacing="0" AlignItems="AlignItems.Start">
-                                        <MudText Typo="Typo.body1">@challenge.FirstLine</MudText>
-                                        <MudCollapse Expanded="@isExpanded">
-
-                                            @foreach (string line in restLines)
-                                            {
-                                                <MudText Typo="Typo.body1" Class="mt-2">@line</MudText>
-                                            }
-
-                                        </MudCollapse>
-                                        <MudButton Variant="Variant.Text"
-                                                   Size="Size.Small"
-                                                   Class="mt-2"
-                                                   Style="margin-left: -5px"
-                                                   Color="Color.Secondary"
-                                                   OnClick="@(() => ToggleChallenge(index))"
-                                                   EndIcon="@(isExpanded ? Icons.Material.Filled.ExpandLess : Icons.Material.Filled.ExpandMore)">
-                                            @GetToggleLabel(index)
-                                        </MudButton>
-                                    </MudStack>
-
-                                }
-                            </MudStack>
-                        </MudItem>
-                    }
-                </MudGrid>
-            </MudStack>
-        </MudPaper>
-        
-        <MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
-            <MudStack Spacing="3">
-                <MudText Typo="Typo.h5">Selected Visuals</MudText>
-                <MudDivider/>
-
-        <MudGrid Spacing="2">
-            @foreach (ShowcaseItem showcase in ShowcaseItems)
-            {
-                <MudItem xs="12" md="6">
-                    <MudStack Spacing="2" Class="engine-project-visual">
-                        <img src="@showcase.ImageSrc"
-                             alt="@showcase.Title"
-                             class="engine-project-image" />
-                                <MudText Typo="Typo.h6">@showcase.Title</MudText>
-                                <MudText Typo="Typo.body2">@showcase.Description</MudText>
-                            </MudStack>
-                        </MudItem>
-                    }
-                </MudGrid>
-            </MudStack>
-        </MudPaper>
+        <ProjectShowcaseGrid ShowcaseItems="@ShowcaseItems" />
 
         <GithubFooter Href="@RepositoryUrl" />
 

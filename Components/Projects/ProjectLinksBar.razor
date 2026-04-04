@@ -1,0 +1,29 @@
+<MudPaper Class="pa-3 rounded-lg" Elevation="0" Outlined="true">
+    <MudStack Row="true"
+              Spacing="1"
+              AlignItems="AlignItems.Center"
+              Justify="Justify.FlexStart"
+              Class="project-links-bar">
+        @foreach (ProjectChip chip in Links)
+        {
+            <MudChip T="string"
+                     Href="@chip.Href"
+                     Target="@chip.Target"
+                     Variant="Variant.Outlined"
+                     Color="@chip.Color"
+                     Icon="@chip.Icon">
+                @chip.Label
+            </MudChip>
+        }
+
+        @foreach (ProjectChip chip in Tags)
+        {
+            <MudChip T="string"
+                     Variant="Variant.Outlined"
+                     Color="@chip.Color"
+                     Icon="@chip.Icon">
+                @chip.Label
+            </MudChip>
+        }
+    </MudStack>
+</MudPaper>

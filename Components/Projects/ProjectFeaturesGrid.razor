@@ -1,0 +1,18 @@
+<MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
+    <MudStack Spacing="3">
+        <MudText Typo="Typo.h5">@Title</MudText>
+        <MudDivider/>
+        <MudGrid Spacing="4">
+            @foreach (ProjectFeature feature in Features)
+            {
+                <MudItem xs="12" md="6" Class="mt-2">
+                    <MudStack Spacing="2" Class="project-feature-card">
+                        <MudIcon Icon="@feature.Icon" Color="Color.Warning" Size="Size.Large" />
+                        <MudText Typo="Typo.h6">@feature.Title</MudText>
+                        <MudText Typo="Typo.body1">@feature.Description</MudText>
+                    </MudStack>
+                </MudItem>
+            }
+        </MudGrid>
+    </MudStack>
+</MudPaper>

@@ -9,10 +9,31 @@ public partial class EngineProjectPage : ComponentBase
     private const string RepositoryUrl = "https://github.com/ldevillard/Devil-Engine";
     private const string MousePickingArticleUrl = "https://medium.com/@logandvllrd/how-to-pick-a-3d-object-using-raycasting-in-c-39112aed1987";
 
-    private bool[] _challengeExpanded = Array.Empty<bool>();
-    private ChallengeView[] _challengeViews = Array.Empty<ChallengeView>();
+    private static readonly ProjectChip[] LinkChips =
+    [
+        new("GitHub repository", Color.Secondary, Icons.Custom.Brands.GitHub, RepositoryUrl),
+        new("Related article", Color.Secondary, Icons.Material.Filled.Article, MousePickingArticleUrl),
+        new("Try it out", Color.Success, Icons.Material.Filled.ArrowOutward, "https://github.com/ldevillard/Devil-Engine/releases/tag/v0.1")
+    ];
 
-    private static readonly FeatureItem[] Features =
+    private static readonly ProjectChip[] TechChips =
+    [
+        new("OpenGL 4.5", Color.Warning),
+        new("C++", Color.Warning)
+    ];
+
+    private static readonly string[] SummaryParagraphs =
+    [
+        "Devil Engine is a personal rendering engine project built from a strong interest in real-time graphics and a desire to understand how the different parts of an engine fit together.",
+        "The goal was not only to build a renderer, but to explore the full workflow around it: scene editing, transform gizmos, object inspection, save and load systems, and an integrated BVH-based ray tracer for more advanced rendering experiments.",
+        "This project began as a way to strengthen my knowledge of 3D rendering. It has since become an experimental playground where I can explore new techniques, iterate on ideas, and continue expanding my graphics programming skills."
+    ];
+
+    private const string NextStep = "Next step: I would like to use the engine as a base for future experiments such as fluid simulation.";
+
+    private const string ChallengesIntro = "Here are a few challenges that came up while building the engine. Several of them raised questions I had not really anticipated at the beginning, especially around data layout, runtime reconstruction, and the gap between a rendering feature working in isolation and behaving correctly inside an editor.";
+
+    private static readonly ProjectFeature[] Features =
     [
         new(
             "Real-time rendering",
@@ -32,7 +53,7 @@ public partial class EngineProjectPage : ComponentBase
             Icons.Material.Filled.Save)
     ];
 
-    private static readonly ChallengeItem[] Challenges =
+    private static readonly ProjectChallenge[] Challenges =
     [
         new(
             "BVH on CPU and GPU",
@@ -60,7 +81,7 @@ public partial class EngineProjectPage : ComponentBase
             Icons.Material.Filled.Gesture)
     ];
 
-    private static readonly ShowcaseItem[] ShowcaseItems =
+    private static readonly ProjectShowcase[] ShowcaseItems =
     [
         new(
             "Editor view",
@@ -102,58 +123,4 @@ public partial class EngineProjectPage : ComponentBase
             "https://iquilezles.org/articles/intersectors/"
         )
     ];
-
-    private sealed record FeatureItem(string Title, string Description, string Icon);
-
-    private sealed record ChallengeItem(string Title, string[] Description, string Icon);
-
-    private sealed record ShowcaseItem(string Title, string Description, string ImageSrc);
-
-    protected override void OnInitialized()
-    {
-        _challengeViews = Challenges
-            .Select(c =>
-            {
-                string firstLine = (c.Description != null && c.Description.Length > 0) ? c.Description[0] : string.Empty;
-                string[] restLines = (c.Description != null && c.Description.Length > 1) ? c.Description[1..] : Array.Empty<string>();
-                return new ChallengeView(c.Title, c.Icon, firstLine, restLines);
-            })
-            .ToArray();
-
-        _challengeExpanded = new bool[_challengeViews.Length];
-    }
-
-    private void ToggleChallenge(int index)
-    {
-        EnsureExpandedSize();
-
-        if ((uint)index >= _challengeExpanded.Length)
-        {
-            return;
-        }
-
-        _challengeExpanded[index] = !_challengeExpanded[index];
-        StateHasChanged();
-    }
-
-    private string GetToggleLabel(int index)
-    {
-        EnsureExpandedSize();
-
-        return (uint)index < _challengeExpanded.Length && _challengeExpanded[index]
-            ? "Less details"
-            : "More details";
-    }
-
-    private int EnsureExpandedSize()
-    {
-        if (_challengeExpanded == null || _challengeExpanded.Length != _challengeViews.Length)
-        {
-            _challengeExpanded = new bool[_challengeViews.Length];
-        }
-
-        return _challengeExpanded.Length;
-    }
-
-    private sealed record ChallengeView(string Title, string Icon, string FirstLine, string[] RestLines);
 }

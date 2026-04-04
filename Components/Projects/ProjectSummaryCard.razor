@@ -1,0 +1,31 @@
+<MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
+    <MudStack Spacing="3">
+        <MudText Typo="Typo.h5">@Title</MudText>
+
+        <MudDivider/>
+        
+        <MudStack Spacing="2">
+            @if (Paragraphs != null)
+            {
+                @foreach (string paragraph in Paragraphs)
+                {
+                    <MudText Typo="Typo.body1" Class="mt-3" Align="Align.Left">
+                        @paragraph
+                    </MudText>
+                }
+            }
+
+            @if (!string.IsNullOrWhiteSpace(NextStep))
+            {
+                <MudPaper Class="pa-3 rounded-lg mt-3" Elevation="0" Outlined="true">
+                    <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="0">
+                        <MudText Typo="Typo.body2" Color="Color.Secondary" Align="Align.Left">
+                            @NextStep
+                        </MudText>
+                        <MudIcon Icon="@Icons.Material.Filled.Lightbulb" Color="Color.Warning" Size="Size.Small" />
+                    </MudStack>
+                </MudPaper>
+            }
+        </MudStack>
+    </MudStack>
+</MudPaper>
