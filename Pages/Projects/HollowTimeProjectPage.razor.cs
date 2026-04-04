@@ -86,19 +86,19 @@ public partial class HollowTimeProjectPage : ComponentBase
         new(
             "Placeholder visual 1",
             "Placeholder description for first visual.",
-            "images/timer.png"),
+            "images/projects/hollow-time/timer.png"),
         new(
             "Placeholder visual 2",
             "Placeholder description for second visual.",
-            "images/timer.png"),
+            "images/projects/hollow-time/timer.png"),
         new(
             "Placeholder visual 3",
             "Placeholder description for third visual.",
-            "images/timer.png"),
+            "images/projects/hollow-time/timer.png"),
         new(
             "Placeholder visual 4",
             "Placeholder description for fourth visual.",
-            "images/timer.png")
+            "images/projects/hollow-time/timer.png")
     ];
 
     private static readonly ProjectSourceLink[] Sources =

@@ -83,11 +83,11 @@ public partial class Chip8EmulatorProjectPage : ComponentBase
         new(
             "Placeholder visual 1",
             "Placeholder description for first visual.",
-            "images/chip-8.gif"),
+            "images/projects/chip-8/chip-8.gif"),
         new(
             "Placeholder visual 2",
             "Placeholder description for second visual.",
-            "images/chip-8-editor.gif")
+            "images/projects/chip-8/chip-8-editor.gif")
     ];
 
     private static readonly ProjectSourceLink[] Sources =

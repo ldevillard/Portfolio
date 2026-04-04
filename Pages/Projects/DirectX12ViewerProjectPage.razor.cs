@@ -86,19 +86,19 @@ public partial class DirectX12ViewerProjectPage : ComponentBase
         new(
             "Placeholder visual 1",
             "Placeholder description for first visual.",
-            "images/bike-showcase.gif"),
+            "images/projects/directx12-viewer/bike-showcase.gif"),
         new(
             "Placeholder visual 2",
             "Placeholder description for second visual.",
-            "images/bike-showcase.gif"),
+            "images/projects/directx12-viewer/bike-showcase.gif"),
         new(
             "Placeholder visual 3",
             "Placeholder description for third visual.",
-            "images/bike-showcase.gif"),
+            "images/projects/directx12-viewer/bike-showcase.gif"),
         new(
             "Placeholder visual 4",
             "Placeholder description for fourth visual.",
-            "images/bike-showcase.gif")
+            "images/projects/directx12-viewer/bike-showcase.gif")
     ];
 
     private static readonly ProjectSourceLink[] Sources =

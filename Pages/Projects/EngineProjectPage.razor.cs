@@ -86,19 +86,19 @@ public partial class EngineProjectPage : ComponentBase
         new(
             "Editor view",
             "The main viewport combines rendering and in-engine editing tools in the same workflow.",
-            "images/editor-showcase.gif"),
+            "images/projects/devil-engine/editor-showcase.gif"),
         new(
             "BVH debug view",
             "A useful example of rendering and engine visualization.",
-            "images/bvh-showcase.gif"),
+            "images/projects/devil-engine/bvh-showcase.gif"),
         new(
             "Raytraced frame",
             "A rendered frame that highlights reflections, refractions, and accumulation experiments.",
-            "images/raytracing.png"),
+            "images/projects/devil-engine/raytracing.png"),
         new(
             "Raytraced video showcase",
             "A video that shows a plane using orbital movements and comparing raytraced and rasterized renders.",
-            "images/demo-plane.gif")
+            "images/projects/devil-engine/demo-plane.gif")
     ];
 
     private static readonly ProjectSourceLink[] Sources =
