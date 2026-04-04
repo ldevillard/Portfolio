@@ -89,6 +89,31 @@
     line-height: 1.7;
     min-height: 3.4em;
 }
+/* /Components/Projects/ProjectFeaturesGrid.razor.rz.scp.css */
+:global(.project-feature-card)[b-4ktjx68o2q] {
+    height: 100%;
+    padding: 1rem 1.25rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.02);
+}
+/* /Components/Projects/ProjectLinksBar.razor.rz.scp.css */
+.project-links-bar[b-990wuiuwbs] {
+    flex-wrap: wrap;
+}
+/* /Components/Projects/ProjectShowcaseGrid.razor.rz.scp.css */
+.project-visual-card[b-31pw0ztaxj] {
+    height: 100%;
+}
+
+.project-image[b-31pw0ztaxj] {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
 /* /Components/Shared/SectionDivider.razor.rz.scp.css */
 
 .section-divider-label[b-w1p2y61i8f] {
@@ -286,62 +311,4 @@
     .card-text[b-yhalji4bj5] {
         transition: none;
     }
-}
-/* /Pages/Projects/Chip8EmulatorProjectPage.razor.rz.scp.css */
-.engine-project-links[b-f3jwxgqnya] {
-    flex-wrap: wrap;
-}
-
-.engine-project-feature[b-f3jwxgqnya] {
-    height: 100%;
-    padding: 1rem 1.25rem;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    background: rgba(255, 255, 255, 0.02);
-}
-
-.engine-project-list-row[b-f3jwxgqnya] {
-    align-items: flex-start;
-}
-
-.engine-project-visual[b-f3jwxgqnya] {
-    height: 100%;
-}
-
-.engine-project-image[b-f3jwxgqnya] {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-}
-/* /Pages/Projects/EngineProjectPage.razor.rz.scp.css */
-.engine-project-links[b-oe70ytkkrc] {
-    flex-wrap: wrap;
-}
-
-.engine-project-feature[b-oe70ytkkrc] {
-    height: 100%;
-    padding: 1rem 1.25rem;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    background: rgba(255, 255, 255, 0.02);
-}
-
-.engine-project-list-row[b-oe70ytkkrc] {
-    align-items: flex-start;
-}
-
-.engine-project-visual[b-oe70ytkkrc] {
-    height: 100%;
-}
-
-.engine-project-image[b-oe70ytkkrc] {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
 }
