@@ -21,14 +21,14 @@ public partial class Chip8EmulatorProjectPage : ComponentBase
 
     private static readonly string[] SummaryParagraphs =
     [
-        "Placeholder paragraph summarizing the Chip-8 emulator project and its overall goals.",
-        "Placeholder paragraph describing design choices, emulator workflow, and development focus areas.",
-        "Placeholder paragraph about learnings, experimentation opportunities, and future improvements."
+        "Chip-8 Emulator started as a small playground project to learn how a full interpreter works: reading opcodes from memory, decoding them, and handling timers, keypad input, and display updates.",
+        "To make experimentation quick, it includes hot reload of ROMs, a tiny built-in editor using ImGui, and a debug overlay that shows registers and stack while the game is running.",
+        "It also gave me a first introduction to emulation and helped me better understand how older systems work under the hood."
     ];
 
-    private const string NextStep = "Placeholder next step to highlight a planned improvement or experiment for this emulator.";
+    private const string NextStep = "Next step: It could be interesting to add save states, allowing snapshots to be captured and restored at runtime.";
 
-    private const string ChallengesIntro = "Placeholder overview of technical or design challenges encountered while building this emulator.";
+    private const string ChallengesIntro = "Here are a few interesting problems that came up while turning a tiny emulator into a usable tool for testing and iterating on ROMs.";
 
     private static readonly ProjectFeature[] Features =
     [
@@ -81,28 +81,22 @@ public partial class Chip8EmulatorProjectPage : ComponentBase
     private static readonly ProjectShowcase[] ShowcaseItems =
     [
         new(
-            "Placeholder visual 1",
-            "Placeholder description for first visual.",
+            "Game View",
+            "A view of different Chip-8 ROMS running on the emulator.",
             "images/projects/chip-8/chip-8.gif"),
         new(
-            "Placeholder visual 2",
-            "Placeholder description for second visual.",
+            "Editor View",
+            "The editor of the emulator with hot reloading and registers view.",
             "images/projects/chip-8/chip-8-editor.gif")
     ];
 
     private static readonly ProjectSourceLink[] Sources =
     [
         new(
-            "Placeholder source 1",
-            "https://example.com/source-1"),
+            "Cowgod's Chip-8 Technical Reference",
+            "http://devernay.free.fr/hacks/chip8/C8TECH10.HTM"),
         new(
-            "Placeholder source 2",
-            "https://example.com/source-2"),
-        new(
-            "Placeholder source 3",
-            "https://example.com/source-3"),
-        new(
-            "Placeholder source 4",
-            "https://example.com/source-4")
+            "Austin Morlan: Chip8 Emulator",
+            "https://austinmorlan.com/posts/chip8_emulator/")
     ];
 }
