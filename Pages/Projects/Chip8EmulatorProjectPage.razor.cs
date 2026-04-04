@@ -7,19 +7,16 @@ namespace Portfolio.Pages.Projects;
 public partial class Chip8EmulatorProjectPage : ComponentBase
 {
     private const string RepositoryUrl = "https://github.com/ldevillard/CHIP8-Emulator";
-    private const string ArticleUrl = "https://example.com/chip8-article-placeholder";
-    private const string DemoUrl = "https://example.com/chip8-demo-placeholder";
 
     private static readonly ProjectChip[] LinkChips =
     [
         new("GitHub repository", Color.Secondary, Icons.Custom.Brands.GitHub, RepositoryUrl),
-        new("Related article", Color.Secondary, Icons.Material.Filled.Article, ArticleUrl),
     ];
 
     private static readonly ProjectChip[] TechChips =
     [
-        new("Placeholder Tech 1", Color.Warning),
-        new("Placeholder Tech 2", Color.Warning)
+        new("OpenGL", Color.Warning),
+        new("C++", Color.Warning)
     ];
 
     private static readonly string[] SummaryParagraphs =
@@ -90,15 +87,7 @@ public partial class Chip8EmulatorProjectPage : ComponentBase
         new(
             "Placeholder visual 2",
             "Placeholder description for second visual.",
-            "images/chip-8.gif"),
-        new(
-            "Placeholder visual 3",
-            "Placeholder description for third visual.",
-            "images/chip-8.gif"),
-        new(
-            "Placeholder visual 4",
-            "Placeholder description for fourth visual.",
-            "images/chip-8.gif")
+            "images/chip-8-editor.gif")
     ];
 
     private static readonly ProjectSourceLink[] Sources =

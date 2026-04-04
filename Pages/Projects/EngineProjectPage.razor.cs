@@ -18,7 +18,7 @@ public partial class EngineProjectPage : ComponentBase
 
     private static readonly ProjectChip[] TechChips =
     [
-        new("OpenGL 4.5", Color.Warning),
+        new("OpenGL", Color.Warning),
         new("C++", Color.Warning)
     ];
 
