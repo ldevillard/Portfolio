@@ -21,9 +21,9 @@ public partial class Chip8EmulatorProjectPage : ComponentBase
 
     private static readonly string[] SummaryParagraphs =
     [
+        "As Chip-8 is a tiny 8-bit system, it gave me a first introduction to emulation and helped me better understand how older systems work under the hood.",
         "Chip-8 Emulator started as a small playground project to learn how a full interpreter works: reading opcodes from memory, decoding them, and handling timers, keypad input, and display updates.",
-        "To make experimentation quick, it includes hot reload of ROMs, a tiny built-in editor using ImGui, and a debug overlay that shows registers and stack while the game is running.",
-        "It also gave me a first introduction to emulation and helped me better understand how older systems work under the hood."
+        "To make experimentation quick, it includes hot reload of ROMs, a tiny built-in editor using ImGui, and a debug overlay that shows registers while the game is running.",
     ];
 
     private const string NextStep = "Next step: It could be interesting to add save states, allowing snapshots to be captured and restored at runtime.";
@@ -33,21 +33,21 @@ public partial class Chip8EmulatorProjectPage : ComponentBase
     private static readonly ProjectFeature[] Features =
     [
         new(
-            "Placeholder feature title 1",
-            "Placeholder feature description detailing emulator capability or tool.",
-            Icons.Material.Filled.LightMode),
+            "Complete opcode interpreter",
+            "Implements the full Chip-8 instruction set with timers, keypad mapping, stack/program counters management, and configurable clock speed.",
+            Icons.Material.Filled.Memory),
         new(
-            "Placeholder feature title 2",
-            "Placeholder feature description exploring UX, debugging, or tooling aspects.",
-            Icons.Material.Filled.Tune),
+            "Live ROM reload + mini editor",
+            "Reload or reset ROMs at runtime without restarting the app, while automatically detecting any ROMs placed in the dedicated folder.\n",
+            Icons.Material.Filled.Bolt),
         new(
-            "Placeholder feature title 3",
-            "Placeholder feature description covering performance, accuracy, or compatibility.",
-            Icons.Material.Filled.AutoFixHigh),
+            "Runtime debug overlay",
+            "On-screen registers to view program flow while running.",
+            Icons.Material.Filled.BugReport),
         new(
-            "Placeholder feature title 4",
-            "Placeholder feature description about loading ROMs, editing, or visualization.",
-            Icons.Material.Filled.Save)
+            "Editor integrated display",
+            "64×32 framebuffer rendered with OpenGL and presented through ImGui in a retro-inspired display view.",
+            Icons.Material.Filled.Monitor)
     ];
 
     private static readonly ProjectChallenge[] Challenges =
