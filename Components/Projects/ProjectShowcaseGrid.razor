@@ -3,10 +3,10 @@
         <MudText Typo="Typo.h5">@Title</MudText>
         <MudDivider/>
 
-        <MudGrid Spacing="2">
+        <MudGrid Spacing="4">
             @foreach (ProjectShowcase showcase in ShowcaseItems)
             {
-                <MudItem xs="12" md="6">
+                <MudItem xs="12" md="6" Class="mt-2">
                     <MudStack Spacing="2" Class="project-visual-card">
                         <MudLink Href="@showcase.ImageSrc" Target="_blank" Underline="Underline.None">
                             <img src="@showcase.ImageSrc"
