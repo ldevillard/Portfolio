@@ -1,13 +1,10 @@
 using Microsoft.AspNetCore.Components;
 
-namespace Portfolio.Components;
+namespace Portfolio.Components.Projects;
 
-public partial class ProjectCard : ComponentBase
+public partial class ProjectIntro : ComponentBase
 {
-    [Parameter] public string Href { get; set; } = string.Empty;
-    [Parameter] public string GithubHref { get; set; } = string.Empty;
     [Parameter, EditorRequired] public string Title { get; set; } = string.Empty;
-    [Parameter] public IReadOnlyList<string> Categories { get; set; } = [];
     [Parameter, EditorRequired] public string Description { get; set; } = string.Empty;
     [Parameter, EditorRequired] public string ImageSrc { get; set; } = string.Empty;
 }

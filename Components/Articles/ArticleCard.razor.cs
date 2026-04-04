@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 
-namespace Portfolio.Components;
+namespace Portfolio.Components.Articles;
 
 public partial class ArticleCard : ComponentBase
 {

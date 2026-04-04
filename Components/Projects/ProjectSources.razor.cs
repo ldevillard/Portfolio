@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 
-namespace Portfolio.Components;
+namespace Portfolio.Components.Projects;
 
 public partial class ProjectSources : ComponentBase
 {

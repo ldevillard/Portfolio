@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
-using Portfolio.Components;
+using Portfolio.Components.Projects;
 
 namespace Portfolio.Pages.Projects;
 
