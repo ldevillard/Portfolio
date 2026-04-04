@@ -1,12 +1,10 @@
-<div class="section-divider">
-    <span class="section-divider-line" aria-hidden="true"></span>
-    <div class="section-divider-content">
+<MudDivider Light="true"/>
+<MudContainer>
+    <MudStack AlignItems="AlignItems.Center">
         <span class="section-divider-label">@Label</span>
-
         @if (!string.IsNullOrWhiteSpace(Caption))
         {
-            <span class="section-divider-caption">@Caption</span>
+            <MudText Color="Color.Secondary" Align="Align.Center">@Caption</MudText>
         }
-    </div>
-    <span class="section-divider-line" aria-hidden="true"></span>
-</div>
+    </MudStack>
+</MudContainer>

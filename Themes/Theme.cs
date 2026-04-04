@@ -9,7 +9,7 @@ namespace Portfolio.Themes
             PaletteDark = new PaletteDark()
             {
                 Primary = "#a89c8a",
-                Secondary = "#B8B0A6",
+                Secondary = "#E2D4BE",
                 Tertiary = "#8a7651",
 
                 Background = "#262732",
@@ -30,7 +30,7 @@ namespace Portfolio.Themes
                 Divider = "rgba(255,255,255,0.08)",
                 LinesDefault = "rgba(255,255,255,0.08)",
 
-                Success = "#9CAF88",
+                Success = "#9cc472",
                 Warning = "#C8AE7D",
                 Error = "#C88F8F",
                 Info = "#9AAFC2"
