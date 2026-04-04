@@ -32,8 +32,8 @@ namespace Portfolio.Themes
 
                 Success = "#9cc472",
                 Warning = "#C8AE7D",
-                Error = "#C88F8F",
-                Info = "#9AAFC2"
+                Error = "#c27070",
+                Info = "#769dc2"
             }
         };
     }
