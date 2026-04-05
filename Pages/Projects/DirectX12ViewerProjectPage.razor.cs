@@ -23,68 +23,75 @@ public partial class DirectX12ViewerProjectPage : ComponentBase
 
     private static readonly string[] SummaryParagraphs =
     [
-        "Placeholder paragraph summarizing the DirectX 12 viewer project and its overall goals.",
-        "Placeholder paragraph describing rendering pipeline choices, tools, and workflow.",
-        "Placeholder paragraph about learnings, experimentation opportunities, and future improvements."
+        "My DirectX 12 Viewer is a small prototype built to understand the fundamentals of modern graphics APIs and gain experience using DirectX 12.",
+        "The goal was not to build a full rendering engine, but to experiment with core concepts such as command lists, resource management, synchronization, and GPU control.",
+        "By keeping the project intentionally simple, I could focus on learning how the API behaves and how rendering work is scheduled and executed on the GPU.",
+        "I also took the opportunity to structure the project into separate modules, isolating the rendering API, the model loading library, and the main application.",
+        "This project helped me build confidence with explicit graphics programming and prepared the ground for more advanced rendering experiments."
     ];
 
-    private const string NextStep = "Placeholder next step to highlight a planned improvement or experiment for this viewer.";
+    private const string NextStep = "Next step: I plan to extend this knowledge by building more complete rendering systems and exploring performance-oriented techniques using DirectX 12.";
 
-    private const string ChallengesIntro = "Placeholder overview of technical or design challenges encountered while building this viewer.";
+    private const string ChallengesIntro = "Here are a few challenges that came up while building this prototype. Several of them helped clarify how explicit graphics APIs behave in practice, particularly around resource management, pipeline configuration, and synchronization between the CPU and GPU.";
 
     private static readonly ProjectFeature[] Features =
     [
         new(
-            "Placeholder feature title 1",
-            "Placeholder feature description detailing rendering capability or tool.",
-            Icons.Material.Filled.AutoAwesomeMosaic),
+            "DirectX 12 fundamentals",
+            "Built a small rendering prototype to understand how DirectX 12 manages command lists, resources, and GPU synchronization.",
+            Icons.Material.Filled.DeveloperBoard),
         new(
-            "Placeholder feature title 2",
-            "Placeholder feature description exploring debugging, profiling, or tooling aspects.",
-            Icons.Material.Filled.Tune),
+            "Basic model loading",
+            "Loaded external meshes using Assimp and uploaded vertex and index data to the GPU for rendering.",
+            Icons.Material.Filled.ViewInAr),
         new(
-            "Placeholder feature title 3",
-            "Placeholder feature description covering performance, GPU resource management, or accuracy.",
-            Icons.Material.Filled.Speed),
+            "Interactive camera navigation",
+            "Implemented simple keyboard and mouse controls to move around the scene and inspect the rendered models.",
+            Icons.Material.Filled.Explore),
         new(
-            "Placeholder feature title 4",
-            "Placeholder feature description about asset loading, camera controls, or visualization.",
-            Icons.Material.Filled.PhotoCameraFront)
+            "ImGui integration",
+            "Added a debug overlay to switch rendering modes such as wireframe while the viewer is running.",
+            Icons.Material.Filled.DashboardCustomize)
     ];
 
     private static readonly ProjectChallenge[] Challenges =
     [
         new(
-            "Placeholder challenge 1",
-            ["Placeholder challenge first line.",
-                "Placeholder challenge additional detail line.",
-                "Placeholder challenge conclusion or solution summary."],
-            Icons.Material.Filled.Memory),
+            "Isolating the graphics API implementation",
+            ["I wanted to structure the project so that the DirectX 12 implementation would remain reusable beyond this prototype.", 
+                "Rather than placing all rendering logic directly inside the main application, the graphics API code was isolated into its own module with clear responsibilities.",
+                "This separation allowed the viewer to stay simple while keeping the rendering layer independent and easier to evolve.",
+            "Designing the project this way turned the prototype into a reusable foundation that can be extended or integrated into future rendering experiments."],
+            Icons.Material.Filled.Layers),
         new(
-            "Placeholder challenge 2",
-            ["Placeholder challenge first line.",
-                "Placeholder challenge additional detail line.",
-                "Placeholder challenge conclusion or solution summary."],
-            Icons.Material.Filled.Collections),
+            "Runtime rendering mode switching",
+            ["A feature I wanted to implement was allowing the rendering mode to be changed at runtime, switching between solid and wireframe rendering.",
+                "In DirectX 12, pipeline state objects are immutable once created, which means rendering settings such as the fill mode cannot be modified dynamically.",
+                "To support runtime switching, separate pipeline state objects had to be created ahead of time and selected depending on the active rendering mode.",
+            "Designing the rendering flow around this constraint helped clarify how pipeline configuration works in explicit graphics APIs and reinforced the importance of preparing multiple pipeline states for different rendering scenarios."],
+            Icons.Material.Filled.SwitchAccessShortcutAdd),
         new(
-            "Placeholder challenge 3",
-            ["Placeholder challenge first line.",
-                "Placeholder challenge additional detail line.",
-                "Placeholder challenge conclusion or solution summary."],
-            Icons.Material.Filled.Save),
+            "Resource binding and pipeline setup",
+            ["Managing how resources are bound to the rendering pipeline quickly became an important design concern.",
+                "In DirectX 12, resources such as buffers must be explicitly described and organized before they can be used by shaders.",
+                "This required building a small but structured approach to resource binding so that rendering code remained readable and easy to extend.",
+                "Establishing this structure early made the rendering pipeline easier to understand and provided a starting point for adding new rendering features later."],
+            Icons.Material.Filled.Cable),
         new(
-            "Placeholder challenge 4",
-            ["Placeholder challenge first line.",
-                "Placeholder challenge additional detail line.",
-                "Placeholder challenge conclusion or solution summary."],
-            Icons.Material.Filled.Gesture)
+            "Window resizing and GPU synchronization",
+            ["Handling window resizing introduced an important challenge related to resource lifetime and GPU synchronization.",
+                "When the window size changes, swap chain buffers and dependent resources such as render targets must be recreated to match the new dimensions.",
+                "However, these resources may still be in use by the GPU if commands are still being executed.",
+            "To safely resize the swap chain, the GPU queue had to be flushed to ensure that all in-flight command lists had completed before releasing and recreating the back buffers.",
+            "Implementing this helped clarify how resource ownership and synchronization must be handled when rebuilding rendering resources in real-time applications."],
+            Icons.Material.Filled.SyncProblem)
     ];
 
     private static readonly ProjectShowcase[] ShowcaseItems =
     [
         new(
             "First render",
-            "One of the first render I had using my own implementation of Direct3D!",
+            "One of the first renders I produced using my own Direct3D implementation.",
             "images/projects/directx12-viewer/first-dx12-render.gif"),
         new(
             "Model loading and rendering",
