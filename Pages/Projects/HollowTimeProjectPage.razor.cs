@@ -13,20 +13,23 @@ public partial class HollowTimeProjectPage : ComponentBase
     private static readonly ProjectChip[] LinkChips =
     [
         new("GitHub repository", Color.Secondary, Icons.Custom.Brands.GitHub, RepositoryUrl),
-        new("Related article", Color.Secondary, Icons.Material.Filled.Article, ArticleUrl),
+        new("Try it out", Color.Success, Icons.Material.Filled.ArrowOutward, "https://ldevillard.github.io/HollowTime/"),
+        new("Competition Results", Color.Info, Icons.Material.Filled.Leaderboard, "https://www.worldcubeassociation.org/persons/2015DEVI01")
     ];
 
     private static readonly ProjectChip[] TechChips =
     [
-        new("Placeholder Tech 1", Color.Warning),
-        new("Placeholder Tech 2", Color.Warning)
+        new("Blazor", Color.Warning),
+        new("C#", Color.Warning),
+        new("Js", Color.Warning),
     ];
 
     private static readonly string[] SummaryParagraphs =
     [
-        "Placeholder paragraph summarizing the Hollow Time project and its overall goals.",
-        "Placeholder paragraph describing UX, timer features, and performance considerations.",
-        "Placeholder paragraph about learnings, experimentation opportunities, and future improvements."
+        "Hollow Time is a personal web application built from my interest in competitive speedcubing and my desire to create a timer tailored to my own workflow.",
+        "As I regularly practice solving Rubik’s cubes, I wanted a simple and reliable tool to generate scrambles, record solve times, and track performance over time. Building this project was also an opportunity to explore modern web development using Blazor and to set up an automated deployment workflow.",
+        "The application supports official scrambles for multiple cube categories, tracks solve history and averages, and provides both 2D and 3D visualization of scrambles to better understand each configuration.",
+        "This project allowed me to connect a personal hobby with software development, while gaining hands-on experience in building, deploying, and maintaining a real-world web application."
     ];
 
     private const string NextStep = "Placeholder next step to highlight a planned improvement or experiment for this timer.";
@@ -84,36 +87,28 @@ public partial class HollowTimeProjectPage : ComponentBase
     private static readonly ProjectShowcase[] ShowcaseItems =
     [
         new(
-            "Placeholder visual 1",
-            "Placeholder description for first visual.",
+            "Hollow Time Website",
+            "A visual of the hollow time website.",
             "images/projects/hollow-time/timer.png"),
         new(
-            "Placeholder visual 2",
-            "Placeholder description for second visual.",
-            "images/projects/hollow-time/timer.png"),
-        new(
-            "Placeholder visual 3",
-            "Placeholder description for third visual.",
-            "images/projects/hollow-time/timer.png"),
-        new(
-            "Placeholder visual 4",
-            "Placeholder description for fourth visual.",
-            "images/projects/hollow-time/timer.png")
+            "Timer Demo",
+            "A small demo on how to use it.",
+            "images/projects/hollow-time/demo.gif"),
     ];
 
     private static readonly ProjectSourceLink[] Sources =
     [
         new(
-            "Placeholder source 1",
-            "https://example.com/source-1"),
+            "The MudBlazor UI library",
+            "https://mudblazor.com/"),
         new(
-            "Placeholder source 2",
-            "https://example.com/source-2"),
+            "Blazor University",
+            "https://blazor-university.com/"),
         new(
-            "Placeholder source 3",
-            "https://example.com/source-3"),
+            "The cubing.js library",
+            "https://js.cubing.net/cubing/"),
         new(
-            "Placeholder source 4",
-            "https://example.com/source-4")
+            "The CsTimer",
+            "https://cstimer.net/"),
     ];
 }
