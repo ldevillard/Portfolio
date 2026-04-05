@@ -28,7 +28,7 @@ public partial class Chip8EmulatorProjectPage : ComponentBase
 
     private const string NextStep = "Next step: It could be interesting to add save states, allowing snapshots to be captured and restored at runtime.";
 
-    private const string ChallengesIntro = "Here are a few interesting problems that came up while turning a tiny emulator into a usable tool for testing and iterating on ROMs.";
+    private const string ChallengesIntro = "Because I was still new to emulation, this project led me to tackle my first real challenges in the area while turning a small emulator into a practical tool for testing and iterating on ROMs.";
 
     private static readonly ProjectFeature[] Features =
     [
@@ -53,28 +53,30 @@ public partial class Chip8EmulatorProjectPage : ComponentBase
     private static readonly ProjectChallenge[] Challenges =
     [
         new(
-            "Placeholder challenge 1",
-            ["Placeholder challenge first line.",
-                "Placeholder challenge additional detail line.",
-                "Placeholder challenge conclusion or solution summary."],
+            "Respect the interpreter specifications",
+            ["Implemented the full Chip-8 was one of the main emulator challenges:",
+                "Getting every opcode, timer, stack, and memory rule to behave like the reference implementation.",
+                "This meant handling details, such as 60 Hz timers, collision flags, screen wrapping, and the different shift/load quirks used by some ROMs.",
+                "I iterated using test ROMs to validate that all opcodes were running as intended."],
             Icons.Material.Filled.Memory),
         new(
-            "Placeholder challenge 2",
-            ["Placeholder challenge first line.",
-                "Placeholder challenge additional detail line.",
-                "Placeholder challenge conclusion or solution summary."],
+            "Opcode dispatch tables",
+            ["I needed to find a clean way to organize opcode decoding without ending up with a giant switch statement.",
+                "I organized the 16 primary opcode groups and main sub-groups (0x0, 0x8, 0xE, 0xF) into function-pointer tables.",
+                "This way, the interpreter does a single lookup per instruction, and opcode behavior is easier to audit and evolve."],
             Icons.Material.Filled.Collections),
         new(
-            "Placeholder challenge 3", 
-            ["Placeholder challenge first line.",
-                "Placeholder challenge additional detail line.",
-                "Placeholder challenge conclusion or solution summary."],
+            "Hot reload with clean state", 
+            ["I wanted to enable the emulator to reload or reset ROMs at runtime.",
+                "To achieve this, at startup, the emulator scans the dedicated folder for ROM paths and displays them for selection in an ImGui menu.",
+                "Each reload/reset clears the registers, stack, timers, memory and program counter, ensuring that the next ROM always boots from an initial state."],
             Icons.Material.Filled.Save),
         new(
-            "Placeholder challenge 4",
-            ["Placeholder challenge first line.",
-                "Placeholder challenge additional detail line.",
-                "Placeholder challenge conclusion or solution summary."],
+            "Bridging Input and Rendering",
+            ["One of the practical decision to make was deciding how to represent the Chip-8 display in a way that stayed simple to update and easy to render.\n",
+                "Since I was still learning and wanted a clean path between the emulator and the graphics layer, I chose to store the 64×32 framebuffer directly as an RGBA buffer instead of keeping a packed bit-buffer and converting it every frame before upload.",
+                "This way, the emulator can send its framebuffer directly to OpenGL with no extra per-frame conversion step, which kept the rendering path simpler and easier to work with.",
+                "SDL key events were also mapped to the 16-key Chip-8 keypad so the whole input/output path stayed straightforward."],
             Icons.Material.Filled.Gesture)
     ];
 
