@@ -13,13 +13,12 @@ public partial class DirectX12ViewerProjectPage : ComponentBase
     private static readonly ProjectChip[] LinkChips =
     [
         new("GitHub repository", Color.Secondary, Icons.Custom.Brands.GitHub, RepositoryUrl),
-        new("Related article", Color.Secondary, Icons.Material.Filled.Article, ArticleUrl),
     ];
 
     private static readonly ProjectChip[] TechChips =
     [
-        new("Placeholder Tech 1", Color.Warning),
-        new("Placeholder Tech 2", Color.Warning)
+        new("DirectX", Color.Warning),
+        new("C++", Color.Warning)
     ];
 
     private static readonly string[] SummaryParagraphs =
@@ -84,36 +83,28 @@ public partial class DirectX12ViewerProjectPage : ComponentBase
     private static readonly ProjectShowcase[] ShowcaseItems =
     [
         new(
-            "Placeholder visual 1",
-            "Placeholder description for first visual.",
-            "images/projects/directx12-viewer/bike-showcase.gif"),
+            "First render",
+            "One of the first render I had using my own implementation of Direct3D!",
+            "images/projects/directx12-viewer/first-dx12-render.gif"),
         new(
-            "Placeholder visual 2",
-            "Placeholder description for second visual.",
-            "images/projects/directx12-viewer/bike-showcase.gif"),
-        new(
-            "Placeholder visual 3",
-            "Placeholder description for third visual.",
-            "images/projects/directx12-viewer/bike-showcase.gif"),
-        new(
-            "Placeholder visual 4",
-            "Placeholder description for fourth visual.",
+            "Model loading and rendering",
+            "A render of a custom model loaded in the viewer, with a tiny bit of lighting.",
             "images/projects/directx12-viewer/bike-showcase.gif")
     ];
 
     private static readonly ProjectSourceLink[] Sources =
     [
         new(
-            "Placeholder source 1",
-            "https://example.com/source-1"),
+            "Jeremiah: Learning DirectX12",
+            "https://www.3dgep.com/learning-directx-12-1/"),
         new(
-            "Placeholder source 2",
-            "https://example.com/source-2"),
+            "Microsoft Direct3D 12 programming guide",
+            "https://learn.microsoft.com/fr-fr/windows/win32/direct3d12/directx-12-programming-guide"),
         new(
-            "Placeholder source 3",
-            "https://example.com/source-3"),
+            "Microsoft DirectX Graphics Samples",
+            "https://github.com/microsoft/DirectX-Graphics-Samples"),
         new(
-            "Placeholder source 4",
-            "https://example.com/source-4")
+            "Alain Galvan: Raw DirectX 12",
+            "https://alain.xyz/blog/raw-directx12")
     ];
 }
