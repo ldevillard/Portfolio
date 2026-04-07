@@ -2,13 +2,71 @@
 <PageTitle>About</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.Medium" Class="py-12">
-    <BackHomeButton />
+    <MudStack Spacing="6">
+        <BackHomeButton Class="align-self-start" />
 
-    <MudPaper Class="presentation-section pa-8" Elevation="0" Outlined="true">
-        <MudStack Spacing="3">
-            <MudText Typo="Typo.h3">About Me</MudText>
-            <MudText Typo="Typo.body1" Class="presentation-description">
-                This page covers my background, what I enjoy building, and a bit about the things that keep me curious and motivated.            </MudText>
+        <MudPaper Class="presentation-section pa-8" Elevation="0" Outlined="true">
+            <MudStack Spacing="3">
+                <MudText Typo="Typo.h3">About</MudText>
+                <MudText Typo="Typo.body1" Class="presentation-description">
+                    This page covers my background, what I enjoy building, and a bit about the things that keep me curious and motivated.                </MudText>
+            </MudStack>
+        </MudPaper>
+
+        <MudDivider Class="w-100" />
+
+        <MudStack Spacing="4">
+
+            <MudPaper Class="presentation-section pa-8" Elevation="0" Outlined="true">
+                <MudStack Spacing="2">
+                    <MudText Typo="Typo.h5">What I enjoy building</MudText>
+                    <MudStack Spacing="2">
+                        <MudText Typo="Typo.body1">
+                            I have always enjoyed understanding how things work internally.
+                        </MudText>
+                        <MudText Typo="Typo.body1">
+                            When I encounter a system or a technique that interests me, my first instinct is often to try rebuilding it myself. Recreating something step by step helps me understand the underlying decisions, trade-offs, and constraints much better than just reading about it.
+                        </MudText>
+                        <MudText Typo="Typo.body1">
+                            Another part I value a lot is explaining what I learn to others. Writing articles or sharing small technical experiments allows me to clarify my own understanding while hopefully helping someone else along the way. I enjoy the educational aspect of software engineering, where knowledge can be passed on and improved collectively.                        </MudText>
+                    </MudStack>
+                </MudStack>
+            </MudPaper>
+
+            <MudPaper Class="presentation-section pa-8" Elevation="0" Outlined="true">
+                <MudStack Spacing="2">
+                    <MudText Typo="Typo.h5">Outside of work</MudText>
+                    <MudStack Spacing="2">
+                        <MudText Typo="Typo.body1">
+                            Outside of software development, I enjoy activities that require patience, discipline, and continuous improvement.
+                        </MudText>
+                        <MudText Typo="Typo.body1">
+                            I practice speedcubing and have had the opportunity to participate in competitions, including the World Championships in 2017. Training for speedcubing taught me the value of consistency, focused practice, and staying calm under time pressure.
+                        </MudText>
+                        <MudText Typo="Typo.body1">
+                            I also practiced judo for many years and eventually earned a black belt. This journey required perseverance and long-term commitment, and it reinforced my discipline as well as my desire to share knowledge and help others progress.
+                        </MudText>
+                        <MudText Typo="Typo.body1">
+                            More recently, I started skateboarding, which I enjoy for its "try and retry" nature. Improving a trick often comes down to repetition, small adjustments, and patience. A way of thinking that feels very similar to solving technical problems.                        </MudText>
+                    </MudStack>
+                </MudStack>
+            </MudPaper>
+
+            <MudPaper Class="presentation-section pa-8" Elevation="0" Outlined="true">
+                <MudStack Spacing="2">
+                    <MudText Typo="Typo.h5">What I'm currently working on</MudText>
+                    <MudStack Spacing="2">
+                        <MudText Typo="Typo.body1">
+                            At the moment, I am organizing and refining some of the projects I have built so they can be shared more clearly through this portfolio.
+                        </MudText>
+                        <MudText Typo="Typo.body1">
+                            I would also like to expand the articles section to document technical topics I encounter during my projects, both to consolidate my own understanding and to make this knowledge accessible to others.
+                        </MudText>
+                        <MudText Typo="Typo.body1">
+                            Looking ahead, I am particularly interested in exploring fluid simulation using the Smoothed Particle Hydrodynamics (SPH) method. This topic sits at the intersection of physics simulation, engine architecture, and rendering, and I see it as a great opportunity to deepen my understanding of real-time systems.                        </MudText>
+                    </MudStack>
+                </MudStack>
+            </MudPaper>
         </MudStack>
-    </MudPaper>
+    </MudStack>
 </MudContainer>
