@@ -26,62 +26,63 @@ public partial class HollowTimeProjectPage : ComponentBase
 
     private static readonly string[] SummaryParagraphs =
     [
-        "Hollow Time is a personal web application built from my interest in competitive speedcubing and my desire to create a timer tailored to my own workflow.",
+        "Hollow Time is a personal web application built from my interest in competitive speedcubing and my desire to create my own timer.",
         "As I regularly practice solving Rubik’s cubes, I wanted a simple and reliable tool to generate scrambles, record solve times, and track performance over time. Building this project was also an opportunity to explore modern web development using Blazor and to set up an automated deployment workflow.",
         "The application supports official scrambles for multiple cube categories, tracks solve history and averages, and provides both 2D and 3D visualization of scrambles to better understand each configuration.",
-        "This project allowed me to connect a personal hobby with software development, while gaining hands-on experience in building, deploying, and maintaining a real-world web application."
+        "This project allowed me to connect a personal hobby with software development, while gaining hands-on experience in building, deploying, and maintaining a real web application."
     ];
 
-    private const string NextStep = "Placeholder next step to highlight a planned improvement or experiment for this timer.";
+    private const string NextStep = "Next step: I would like to explore simple ways to share solve results with friends, such as lightweight leaderboards or small online sessions.";
 
-    private const string ChallengesIntro = "Placeholder overview of technical or design challenges encountered while building this timer.";
+    private const string ChallengesIntro = "Here are a few challenges that came up while building this application. Several of them were related to handling real-time interactions in the browser, and ensuring that the application remained simple and reliable for everyday use.";
 
     private static readonly ProjectFeature[] Features =
     [
         new(
-            "Placeholder feature title 1",
-            "Placeholder feature description detailing timing capability or UI element.",
-            Icons.Material.Filled.Timer),
+            "Multiple scramble support",
+            "Generate official scrambles for multiple cube categories following World Cube Association standards.",
+            Icons.Material.Filled.Shuffle),
         new(
-            "Placeholder feature title 2",
-            "Placeholder feature description exploring customization, sessions, or scrambles.",
-            Icons.Material.Filled.Tune),
+            "Performance tracking",
+            "Record solve history and compute averages over time.",
+            Icons.Material.Filled.QueryStats),
         new(
-            "Placeholder feature title 3",
-            "Placeholder feature description covering persistence, statistics, or analytics.",
-            Icons.Material.Filled.Insights),
+            "2D and 3D scramble visualization",
+            "Display scrambles visually to better understand cube states before solving.",
+            Icons.Material.Filled.ViewInAr),
         new(
-            "Placeholder feature title 4",
-            "Placeholder feature description about accessibility, responsive layout, or shortcuts.",
-            Icons.Material.Filled.Accessibility)
+            "Automated deployment workflow",
+            "Set up a GitHub-based CI workflow to automatically build and deploy the application to GitHub Pages.",
+            Icons.Material.Filled.CloudDone)
     ];
 
     private static readonly ProjectChallenge[] Challenges =
     [
         new(
-            "Placeholder challenge 1",
-            ["Placeholder challenge first line.",
-                "Placeholder challenge additional detail line.",
-                "Placeholder challenge conclusion or solution summary."],
-            Icons.Material.Filled.Memory),
+            "Accurate and reliable timing",
+            ["A core requirement of a cube timer is providing consistent and precise time measurements.",
+                "Handling user input events while ensuring the timer starts and stops reliably required careful coordination between keyboard handling and application state.",
+                "Special attention was given to avoiding unintended resets or timing inconsistencies, ensuring that recorded times remain valid during regular practice sessions."],
+            Icons.Material.Filled.Speed),
         new(
-            "Placeholder challenge 2",
-            ["Placeholder challenge first line.",
-                "Placeholder challenge additional detail line.",
-                "Placeholder challenge conclusion or solution summary."],
-            Icons.Material.Filled.Collections),
+            "Tracking solve history and averages",
+            ["Tracking solve times involved more than simply storing values.",
+                "The application needed to compute averages, detect the best performance, and update the interface immediately after each solve.",
+                "To support this, dedicated components were designed to manage solve history and recompute statistics incrementally as new times were recorded.",
+                "Special care was taken to highlight the best results visually, allowing users to quickly understand their progress without manually analyzing the data."],
+            Icons.Material.Filled.Insights),
         new(
-            "Placeholder challenge 3",
-            ["Placeholder challenge first line.",
-                "Placeholder challenge additional detail line.",
-                "Placeholder challenge conclusion or solution summary."],
-            Icons.Material.Filled.Save),
+            "Integrating libraries through JavaScript interop",
+            ["Generating official scrambles and visualizing the cube required using existing JavaScript libraries rather than building everything from scratch.",
+                "Since the application is built with Blazor, these libraries were integrated using JavaScript interop, requiring a simple and reliable way to exchange data between the .NET and JavaScript parts of the application.",
+                "This approach allowed the project to stay focused on usability while leveraging well-tested tools for scramble generation and cube visualization."],
+            Icons.Material.Filled.IntegrationInstructions),
         new(
-            "Placeholder challenge 4",
-            ["Placeholder challenge first line.",
-                "Placeholder challenge additional detail line.",
-                "Placeholder challenge conclusion or solution summary."],
-            Icons.Material.Filled.Gesture)
+            "Automated deployment workflow",
+            ["I wanted the application to be easily accessible without manual deployment steps after each update.",
+                "To achieve this, a GitHub-based workflow was set up to automatically build and deploy the application to GitHub Pages whenever changes were pushed to the repository.",
+                "Establishing this pipeline simplified the development process and ensured that the live version of the application always stayed up to date."],
+            Icons.Material.Filled.CloudSync)
     ];
 
     private static readonly ProjectShowcase[] ShowcaseItems =
