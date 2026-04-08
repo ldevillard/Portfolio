@@ -89,6 +89,35 @@
     line-height: 1.7;
     min-height: 3.4em;
 }
+/* /Components/Home/ProfessionalHighlights.razor.rz.scp.css */
+.professional-highlights-strip[b-pg5azbzap2] {
+    width: 100%;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.professional-highlights-grid[b-pg5azbzap2] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.professional-highlight-item[b-pg5azbzap2] {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.professional-highlight-icon[b-pg5azbzap2] {
+    flex: 0 0 auto;
+    margin-top: 2px;
+}
+
+.professional-highlight-text[b-pg5azbzap2] {
+    line-height: 1.45;
+}
 /* /Components/Projects/ProjectFeaturesGrid.razor.rz.scp.css */
 :global(.project-feature-card)[b-4ktjx68o2q] {
     height: 100%;
