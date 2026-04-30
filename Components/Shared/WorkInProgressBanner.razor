@@ -1,0 +1,22 @@
+<MudPaper Class="pa-4 rounded-lg" Elevation="0" Outlined="true">
+    <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Spacing="2">
+        <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2" Style="flex: 1 1 auto; min-width: 0;">
+            <MudIcon Icon="@Icons.Material.Filled.Construction" Color="Color.Warning" Size="Size.Large" />
+
+            <MudStack Spacing="0">
+                <MudText Typo="Typo.subtitle1">@Title</MudText>
+                <MudText Typo="Typo.body2" Color="Color.Secondary">
+                    @Description
+                </MudText>
+            </MudStack>
+        </MudStack>
+
+        <MudChip T="string"
+                 Size="Size.Small"
+                 Variant="Variant.Outlined"
+                 Color="Color.Warning"
+                 Icon="@Icons.Material.Filled.EditNote">
+            WIP
+        </MudChip>
+    </MudStack>
+</MudPaper>
