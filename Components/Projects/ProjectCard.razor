@@ -26,6 +26,17 @@
                                 Github
                             </MudChip>
                         }
+                        
+                        @if (WorkInProgress)
+                        {
+                            <MudChip T="string"
+                                     Size="Size.Small"
+                                     Variant="Variant.Outlined"
+                                     Color="Color.Success"
+                                     Icon="@Icons.Material.Filled.Construction">
+                                Work in progress
+                            </MudChip>
+                        }
                     </MudStack>
                 }
 

@@ -10,4 +10,5 @@ public partial class ProjectCard : ComponentBase
     [Parameter] public IReadOnlyList<string> Categories { get; set; } = [];
     [Parameter, EditorRequired] public string Description { get; set; } = string.Empty;
     [Parameter, EditorRequired] public string ImageSrc { get; set; } = string.Empty;
+    [Parameter] public bool WorkInProgress { get; set; } = false;
 }

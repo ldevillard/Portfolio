@@ -1,0 +1,31 @@
+@page "/projects/smooth-particle-hydrodynamics"
+
+<PageTitle>Smooth Particle Hydrodynamics</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Medium" Class="py-12">
+    <BackHomeButton Text="Back to projects" Href="projects" Class="mb-4" />
+
+    <MudStack Spacing="4">
+        <ProjectIntro Title="Smooth Particle Hydrodynamics"
+                      Description="A placeholder entry for an upcoming particle-based fluid simulation project built around SPH."
+                      ImageSrc="images/projects/sph/SPH.gif" />
+
+        <ProjectLinksBar Links="@LinkChips" Tags="@TechChips" />
+
+        <ProjectSummaryCard Title="Project Summary and Motivation"
+                            Paragraphs="@SummaryParagraphs"
+                            NextStep="@NextStep" />
+
+        <ProjectFeaturesGrid Features="@Features" />
+
+        <ProjectChallenges Title="Challenges"
+                           IntroText="@ChallengesIntro"
+                           Challenges="@Challenges" />
+
+        <ProjectShowcaseGrid ShowcaseItems="@ShowcaseItems" />
+
+        <GithubFooter Href="@RepositoryUrl" />
+
+        <ProjectSources Sources="@Sources" />
+    </MudStack>
+</MudContainer>
