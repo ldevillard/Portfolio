@@ -17,7 +17,7 @@ public partial class DirectX12ViewerProjectPage : ComponentBase
 
     private static readonly ProjectChip[] TechChips =
     [
-        new("DirectX", Color.Warning),
+        new("DirectX 12", Color.Warning),
         new("C++", Color.Warning)
     ];
 
