@@ -17,6 +17,16 @@
             </MudChip>
         }
 
+        @if (WorkInProgress)
+        {
+            <MudChip T="string"
+                     Variant="Variant.Outlined"
+                     Color="Color.Success"
+                     Icon="@Icons.Material.Filled.Construction">
+                Work in progress
+            </MudChip>
+        }
+
         @foreach (ProjectChip chip in Tags)
         {
             <MudChip T="string"

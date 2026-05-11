@@ -6,7 +6,7 @@ namespace Portfolio.Pages.Projects;
 
 public partial class SmoothedParticleHydrodynamicsProjectPage : ComponentBase
 {
-    private const string RepositoryUrl = "https://example.com/sph-repository-placeholder";
+    private const string RepositoryUrl = "https://github.com/ldevillard/Devil-Engine";
     private const string NotesUrl = "https://example.com/sph-technical-notes-placeholder";
     private const string DemoUrl = "https://example.com/sph-demo-placeholder";
 
@@ -96,7 +96,10 @@ public partial class SmoothedParticleHydrodynamicsProjectPage : ComponentBase
     private static readonly ProjectSourceLink[] Sources =
     [
         new(
-            "References will be added soon",
-            "https://example.com/sph-reference-placeholder")
+            "Sebastian Lague: Simulating Fluids",
+            "https://www.youtube.com/watch?v=rSKMYc1CQHE"),
+        new(
+            "Nobody Builds: Fluid Simulation",
+            "https://github.com/NobodyBuilds/fluid_sim")
     ];
 }
