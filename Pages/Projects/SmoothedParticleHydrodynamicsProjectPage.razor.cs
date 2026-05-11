@@ -17,18 +17,19 @@ public partial class SmoothedParticleHydrodynamicsProjectPage : ComponentBase
 
     private static readonly ProjectChip[] TechChips =
     [
-        new("DirectX 12", Color.Warning),
         new("OpenGL", Color.Warning),
         new("C++", Color.Warning),
     ];
 
     private static readonly string[] SummaryParagraphs =
     [
-        "Project summary will be written soon.",
-        "Motivation details will be written soon."
+        "This project started from a strong desire to build a real-time physics simulation and explore a more dynamic side of graphics programming.",
+        "It also felt like a good opportunity to reuse Devil Engine as a foundation instead of starting from scratch, and to see how far it could support a simulation-oriented project.",
+        "What makes this project especially interesting to me is that it brings several areas together at once: simulation, engine architecture, rendering, and tooling.",
+        "The current implementation still relies on a naive all-pairs approach with quadratic complexity, O(n²), which keeps the simulation simple for now but also makes the next technical steps very clear as the project grows."
     ];
 
-    private const string NextStep = "More details will be added soon.";
+    private const string NextStep = "Next step: the simulation currently runs on the CPU, and I would like to introduce grid hashing to reduce neighbor-search complexity and support many more particles. From there, the goal is to move the simulation to the GPU, and later explore it with DirectX 12 rendering to deepen my rendering skills.";
 
     private const string ChallengesIntro = "Challenge details will be written soon.";
 
