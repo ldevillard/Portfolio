@@ -19,11 +19,14 @@
                             Paragraphs="@SummaryParagraphs"
                             NextStep="@NextStep" />
 
-        <ProjectFeaturesGrid Features="@Features" />
+        @* <ProjectFeaturesGrid Features="@Features" />
 
         <ProjectChallenges Title="Challenges"
                            IntroText="@ChallengesIntro"
-                           Challenges="@Challenges" />
+                           Challenges="@Challenges" /> *@
+
+        <PlaceHolderContent Title="Features and challenges are planned"
+                            Description="These sections are planned and will be written soon." />
 
         <ProjectShowcaseGrid ShowcaseItems="@ShowcaseItems" />
 

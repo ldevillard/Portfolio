@@ -7,8 +7,6 @@ namespace Portfolio.Pages.Projects;
 public partial class SmoothedParticleHydrodynamicsProjectPage : ComponentBase
 {
     private const string RepositoryUrl = "https://github.com/ldevillard/Devil-Engine";
-    private const string NotesUrl = "https://example.com/sph-technical-notes-placeholder";
-    private const string DemoUrl = "https://example.com/sph-demo-placeholder";
 
     private static readonly ProjectChip[] LinkChips =
     [
@@ -30,48 +28,6 @@ public partial class SmoothedParticleHydrodynamicsProjectPage : ComponentBase
     ];
 
     private const string NextStep = "Next step: the simulation currently runs on the CPU, and I would like to introduce grid hashing to reduce neighbor-search complexity and support many more particles. From there, the goal is to move the simulation to the GPU, and later explore it with DirectX 12 rendering to deepen my rendering skills.";
-
-    private const string ChallengesIntro = "Challenge details will be written soon.";
-
-    private static readonly ProjectFeature[] Features =
-    [
-        new(
-            "Placeholder",
-            "Details will be written soon.",
-            Icons.Material.Filled.BlurOn),
-        new(
-            "Placeholder",
-            "Details will be written soon.",
-            Icons.Material.Filled.GridView),
-        new(
-            "Placeholder",
-            "Details will be written soon.",
-            Icons.Material.Filled.WaterDrop),
-        new(
-            "Placeholder",
-            "Details will be written soon.",
-            Icons.Material.Filled.Tune)
-    ];
-
-    private static readonly ProjectChallenge[] Challenges =
-    [
-        new(
-            "Placeholder",
-            ["Details will be written soon."],
-            Icons.Material.Filled.Speed),
-        new(
-            "Placeholder",
-            ["Details will be written soon."],
-            Icons.Material.Filled.Search),
-        new(
-            "Placeholder",
-            ["Details will be written soon."],
-            Icons.Material.Filled.CropFree),
-        new(
-            "Placeholder",
-            ["Details will be written soon."],
-            Icons.Material.Filled.Visibility)
-    ];
 
     private static readonly ProjectShowcase[] ShowcaseItems =
     [

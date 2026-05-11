@@ -1,0 +1,27 @@
+<MudPaper Class="pa-4 rounded-lg" Elevation="0" Outlined="true">
+    <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Spacing="2">
+        <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2" Style="flex: 1 1 auto; min-width: 0;">
+            <MudIcon Icon="@Icons.Material.Filled.EditNote" Color="Color.Info" Size="Size.Large" />
+
+            <MudStack Spacing="0">
+                <MudText Typo="Typo.subtitle1">@Title</MudText>
+                <MudText Typo="Typo.body2" Color="Color.Secondary">
+                    @Description
+                </MudText>
+            </MudStack>
+        </MudStack>
+
+        <MudChip T="string"
+                 Size="Size.Small"
+                 Variant="Variant.Outlined"
+                 Color="Color.Info"
+                 Icon="@Icons.Material.Filled.Schedule">
+            Planned
+        </MudChip>
+    </MudStack>
+</MudPaper>
+
+@code {
+    [Parameter] public string Title { get; set; } = "Features and challenges are planned";
+    [Parameter] public string Description { get; set; } = "These sections are planned and will be written soon.";
+}
