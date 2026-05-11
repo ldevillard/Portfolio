@@ -4,7 +4,7 @@ using Portfolio.Components.Projects;
 
 namespace Portfolio.Pages.Projects;
 
-public partial class SmoothParticleHydrodynamicsProjectPage : ComponentBase
+public partial class SmoothedParticleHydrodynamicsProjectPage : ComponentBase
 {
     private const string RepositoryUrl = "https://example.com/sph-repository-placeholder";
     private const string NotesUrl = "https://example.com/sph-technical-notes-placeholder";
@@ -75,21 +75,21 @@ public partial class SmoothParticleHydrodynamicsProjectPage : ComponentBase
     private static readonly ProjectShowcase[] ShowcaseItems =
     [
         new(
-            "Placeholder",
-            "Showcase notes will be added soon.",
+            "First steps",
+            "The project started with gravity and boundary collisions to establish the core particle behavior using GPU instancing.",
+            "images/projects/sph/SPH4.gif"),
+        new(
+            "First SPH simulation",
+            "The first working SPH implementation, rendered with velocity-based coloring.",
             "images/projects/sph/SPH.gif"),
         new(
-            "Placeholder",
-            "Showcase notes will be added soon.",
+            "Toward fluid behavior",
+            "After several iterations and parameter tweaks, the particles began to behave much more like a fluid.",
             "images/projects/sph/SPH2.gif"),
         new(
-            "Placeholder",
-            "Showcase notes will be added soon.",
-            "images/projects/sph/SPH3.gif"),
-        new(
-            "Placeholder",
-            "Showcase notes will be added soon.",
-            "images/projects/sph/SPH4.gif")
+            "Experiments",
+            "This experiment used extreme parameter values, leading to unstable but visually interesting behavior in the simulation.",
+            "images/projects/sph/SPH3.gif")
     ];
 
     private static readonly ProjectSourceLink[] Sources =
