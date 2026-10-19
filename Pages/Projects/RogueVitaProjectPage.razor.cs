@@ -17,28 +17,37 @@ public partial class RogueVitaProjectPage : ComponentBase
     [
         new("OpenGL", Color.Warning),
         new("C++", Color.Warning),
+        new("VitaSDK", Color.Warning)
     ];
 
     private static readonly string[] SummaryParagraphs =
     [
-        "This project started from a strong desire to build a real-time physics simulation and explore a more dynamic side of graphics programming.",
-        "It also felt like a good opportunity to reuse Devil Engine as a foundation instead of starting from scratch, and to see how far it could support a simulation oriented project.",
-        "What makes this project especially interesting to me is that it brings several areas together at once: simulation, engine architecture, rendering, and tooling.",
-        "The project started with a naive all pairs approach with quadratic complexity O(n²), and later evolved toward a uniform grid based neighbor search to support many more particles on the CPU."
+        "Rogue Vita is a work-in-progress isometric rogue-lite game built alongside a custom C++ engine, targeting both PC and PlayStation Vita platforms.",
+        "The project started as a way to explore game programming in a more production-oriented context, focusing on building the systems needed to support gameplay.",
+        "Alongside the game, I am developing a reusable, engine and platform-agnostic framework that provides a common foundation for gameplay development across platforms and future projects.",
+        "I chose the PlayStation Vita as a target because I enjoy handheld gaming, and its hardware limitations provide an interesting challenge for performance and engine development."
     ];
 
-    private const string NextStep = "Next step: I would like to keep pushing the CPU uniform grid version so it can handle even more particles, then move the simulation to the GPU. I would also like to experiment with floating objects by making a small boat float on the fluid, and later explore it with DirectX 12 rendering to deepen my rendering skills.";
+    private const string NextStep = "Next step: I plan to add physics and collision detection while continuing to improve the framework as the game grows.";
 
     private static readonly ProjectShowcase[] ShowcaseItems =
     [
         new(
-            "First gameplay",
-            "TODO",
+            "Current state of the project",
+            "Player controller, animations, lighting and debug view.",
             "images/projects/rogue-vita/rogue-vita-small-gameplay.gif"),
         new(
             "Animation framework",
-            "TODO",
+            "Multiple animated skinned mesh.",
             "images/projects/rogue-vita/rogue-vita-animation.gif"),
+        new(
+            "Console deployment",
+            "PlayStation Vita build and deployment workflow using automated scripts to iterate easily.",
+            "images/projects/rogue-vita/vita.png"),
+        new(
+            "Console performances",
+            "Improving performances on console since the limitations are encountered quickly.",
+            "images/projects/rogue-vita/vita2.png"),
     ];
 
     private static readonly ProjectSourceLink[] Sources =
