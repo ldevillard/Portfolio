@@ -16,9 +16,16 @@
 
         <MudDivider Class="w-100"/>
         <MudStack Spacing="4">
+            <ProjectCard Title="Rogue Vita"
+                         Categories="@(["Engine", "Rendering", "Tools", "Gameplay", "Consoles"])"
+                         Description="Developing an isometric rogue-lite game using a custom engine for PC and PlayStation Vita."
+                         ImageSrc="images/projects/rogue-vita/rogue-vita-small-gameplay.gif"
+                         GithubHref="https://github.com/ldevillard/Rogue-Vita"
+                         Href="projects/rogue-vita"
+                         WorkInProgress="true"/>
             <ProjectCard Title="Devil Engine"
                          Categories="@(["Engine", "Rendering", "Tools"])"
-                         Description="A personal C++ / OpenGL engine focused on rendering, editor tooling, scene authoring, and BVH-accelerated ray tracing."
+                         Description="A C++ / OpenGL engine focused on rendering, editor tooling, scene authoring, and BVH-accelerated ray tracing."
                          ImageSrc="images/projects/devil-engine/editor-showcase.gif"
                          GithubHref="https://github.com/ldevillard/Devil-Engine"
                          Href="projects/devil-engine"/>
@@ -44,13 +51,13 @@
                          ImageSrc="images/projects/chip-8/chip-8.gif"
                          GithubHref="https://github.com/ldevillard/CHIP8-Emulator"
                          Href="projects/chip-8-emulator"/>
-            
-            <ProjectCard Title="Hollow Time"
+
+            @* <ProjectCard Title="Hollow Time"
                          Categories="@(["Web"])"
                          Description="A fully functional online Rubik's cube timer built with the Blazor web framework!"
                          ImageSrc="images/projects/hollow-time/demo.gif"
                          GithubHref="https://github.com/ldevillard/HollowTime"
-                         Href="projects/hollow-time"/>
+                         Href="projects/hollow-time"/> *@
         </MudStack>
     </MudStack>
 </MudContainer>

@@ -1,0 +1,37 @@
+﻿@page "/projects/rogue-vita"
+
+<PageTitle>Rogue Vita</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Medium" Class="py-12">
+    <BackHomeButton Text="Back to projects" Href="projects" Class="mb-4" />
+
+    <MudStack Spacing="4">
+        <ProjectIntro Title="Rogue Vita"
+                      Description="Developing an isometric rogue-lite game using a custom engine for PC and PlayStation Vita."
+                      ImageSrc="images/projects/rogue-vita/rogue-vita-small-gameplay.gif" />
+
+        <ProjectLinksBar Links="@LinkChips" Tags="@TechChips" WorkInProgress="true" />
+
+        <WorkInProgressBanner Title="Page in progress"
+                              Description="This project page is currently being written." />
+
+        @* <ProjectSummaryCard Title="Project Summary and Motivation"
+                            Paragraphs="@SummaryParagraphs"
+                            NextStep="@NextStep" /> *@
+
+        @* <ProjectFeaturesGrid Features="@Features" />
+
+        <ProjectChallenges Title="Challenges"
+                           IntroText="@ChallengesIntro"
+                           Challenges="@Challenges" /> *@
+
+        <PlaceHolderContent Title="Features and challenges are planned"
+                            Description="These sections are planned and will be written soon." />
+
+        <ProjectShowcaseGrid ShowcaseItems="@ShowcaseItems" />
+
+        <GithubFooter Href="@RepositoryUrl" />
+
+        <ProjectSources Sources="@Sources" />
+    </MudStack>
+</MudContainer>
