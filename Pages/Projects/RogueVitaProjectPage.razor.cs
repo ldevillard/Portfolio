@@ -25,10 +25,11 @@ public partial class RogueVitaProjectPage : ComponentBase
         "Rogue Vita is a work-in-progress isometric rogue-lite game built alongside a custom C++ engine, working on both PC and PlayStation Vita platforms.",
         "I started this project to explore game development in a production-oriented way, building things as much as possible by myself, from engine systems to gameplay features.",
         "Alongside the game, I am developing a reusable cross-platform engine, providing a common foundation for gameplay development in this and future projects.",
-        "I chose to work on the PlayStation Vita because I enjoy handheld gaming, and its hardware limitations make it an interesting challenge to optimize the engine/gameplay and maintain a target of 60 fps."
+        "I chose to work on the PlayStation Vita because I enjoy handheld gaming, and its hardware limitations make it an interesting challenge to optimize the engine/gameplay and maintain a target of 60 fps.",
+        "The main goal is to build a fun and responsive game, focusing on game feel while developing the engine and tools needed by the gameplay!"
     ];
 
-    private const string NextStep = "Next step: I plan to keep building a fully playable game by adding features like physics, audio, pathfinding... While expanding the framework along the way.";
+    private const string NextStep = "Next step: I plan to keep building a fully playable game by adding features like physics, audio, and pathfinding... While expanding the framework along the way.";
 
     private static readonly ProjectFeature[] Features =
     [
@@ -92,7 +93,7 @@ public partial class RogueVitaProjectPage : ComponentBase
     [
         new(
             "Animation framework",
-            "Multiple animated skinned mesh running at the same time using GPU skinning.",
+            "Multiple animated skinned meshes running at the same time using GPU skinning.",
             "images/projects/rogue-vita/rogue-vita-animation.gif"),
         new(
             "Animation performance test",
@@ -103,8 +104,8 @@ public partial class RogueVitaProjectPage : ComponentBase
             "PlayStation Vita build and deployment workflow using automated scripts to iterate easily.",
             "images/projects/rogue-vita/vita.png"),
         new(
-            "Console performances",
-            "Improving performances on console since the limitations are encountered quickly. Time to scale the game!",
+            "Console performance",
+            "Improving performance on console since the limitations are encountered quickly. Time to scale the game!",
             "images/projects/rogue-vita/vita2.png"),
     ];
 
