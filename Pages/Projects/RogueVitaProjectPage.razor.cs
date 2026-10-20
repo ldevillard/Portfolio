@@ -22,10 +22,10 @@ public partial class RogueVitaProjectPage : ComponentBase
 
     private static readonly string[] SummaryParagraphs =
     [
-        "Rogue Vita is a work-in-progress isometric rogue-lite game built alongside a custom C++ engine, targeting both PC and PlayStation Vita platforms.",
-        "The project started as a way to explore game development in a production-oriented context, building as much as possible myself, from engine systems to gameplay features.",
-        "Alongside the game, I am developing a reusable, engine and platform-agnostic framework that provides a common foundation for gameplay development across platforms and future projects.",
-        "I chose the PlayStation Vita as a target because I enjoy handheld gaming, and its hardware limitations make it an interesting challenge to optimize the engine and maintain 60 fps."
+        "Rogue Vita is a work-in-progress isometric rogue-lite game built alongside a custom C++ engine, working on both PC and PlayStation Vita platforms.",
+        "I started this project to explore game development in a production-oriented way, building things as much as possible by myself, from engine systems to gameplay features.",
+        "Alongside the game, I am developing a reusable cross-platform engine, providing a common foundation for gameplay development in this and future projects.",
+        "I chose to work on the PlayStation Vita because I enjoy handheld gaming, and its hardware limitations make it an interesting challenge to optimize the engine/gameplay and maintain a target of 60 fps."
     ];
 
     private const string NextStep = "Next step: I plan to keep building a fully playable game by adding features like physics, audio, pathfinding... While expanding the framework along the way.";
@@ -46,11 +46,11 @@ public partial class RogueVitaProjectPage : ComponentBase
             Icons.Material.Filled.Animation),
         new(
             "Asset pipeline",
-            "Custom asset cookers converting source assets into runtime formats, reducing the amount of processing required at runtime.",
+            "Custom asset cooker converting source assets into runtime formats, reducing the amount of processing required at runtime.",
             Icons.Material.Filled.Transform)
     ];
 
-    private const string ChallengesIntro = "Building a game with a custom engine means improving the engine and creating the tools needed along the way. This includes debugging tools and asset cooking, with plans for an in-game editor and scene management. The main challenges so far have been working within the Vita's hardware limits, building an animation system, and maintaining good performance without sacrificing visual quality.";    
+    private const string ChallengesIntro = "Building a game with a custom engine means improving the engine and creating the tools needed along the way. This includes debugging tools and asset cooking, with plans for an in-game editor and scene management. The main challenges so far have been working with the Vita's hardware limits, building an animation system, and maintaining good performance without sacrificing visual quality.";    
     
     private static readonly ProjectChallenge[] Challenges =
     [
@@ -58,7 +58,7 @@ public partial class RogueVitaProjectPage : ComponentBase
             "Cross-platform engine and framework",
             [
                 "One of the main challenges was supporting both PC and PlayStation Vita with the same codebase.",
-                "The two platforms have different graphics APIs, input systems, and hardware limits, so some parts of the engine need different implementations.",
+                "The two platforms have different graphics APIs, input systems, and hardware limits, so some parts of the engine need different backends.",
                 "The framework provides a shared interface for these systems, keeping most of the code platform-independent while allowing each platform to handle its own specific needs."
             ],
             Icons.Material.Filled.Devices),
@@ -91,13 +91,13 @@ public partial class RogueVitaProjectPage : ComponentBase
     private static readonly ProjectShowcase[] ShowcaseItems =
     [
         new(
-            "Current state of the project",
-            "Player controller using aim-assist, animations, toon lighting and debug view.",
-            "images/projects/rogue-vita/rogue-vita-small-gameplay.gif"),
-        new(
             "Animation framework",
-            "Multiple animated skinned mesh running at the same time using GPU skinning",
+            "Multiple animated skinned mesh running at the same time using GPU skinning.",
             "images/projects/rogue-vita/rogue-vita-animation.gif"),
+        new(
+            "Animation performance test",
+            "Measuring performance on console, observing bottlenecks, and targeting 60 fps.",
+            "images/projects/rogue-vita/animation-perf.gif"),
         new(
             "Console deployment",
             "PlayStation Vita build and deployment workflow using automated scripts to iterate easily.",
@@ -116,5 +116,11 @@ public partial class RogueVitaProjectPage : ComponentBase
         new(
             "Rinnegatamante: VitaGL",
             "https://github.com/rinnegatamante/vitagl"),
+        new(
+            "VitaSDK documentation",
+            "https://docs.vitasdk.org/"),
+        new(
+            "Assets used in project: Meshtint Cute Series",
+            "https://www.meshtint.com/collections/cute-series"),
     ];
 }
