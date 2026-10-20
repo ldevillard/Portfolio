@@ -1,0 +1,36 @@
+<MudPaper Class="pa-6 rounded-lg" Elevation="0" Outlined="true">
+    <MudStack Spacing="3">
+        <MudText Typo="Typo.h5">Performance on @Platform</MudText>
+        <MudDivider />
+
+        <MudGrid Spacing="4">
+            <MudItem xs="12" sm="4">
+                <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Start">
+                    <MudIcon Icon="@Icons.Material.Filled.Speed" Color="Color.Warning" Size="Size.Small" Class="mt-1" />
+                    <MudStack Spacing="0">
+                        <MudText Typo="Typo.h5" Color="Color.Secondary">@(FrameRateTarget) FPS</MudText>
+                        <MudText Typo="Typo.body2">Frame-rate target</MudText>
+                    </MudStack>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="12" sm="4">
+                <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Start">
+                    <MudIcon Icon="@Icons.Material.Filled.Animation" Color="Color.Warning" Size="Size.Small" Class="mt-1" />
+                    <MudStack Spacing="0">
+                        <MudText Typo="Typo.h5" Color="Color.Secondary">@SkinnedMeshCount</MudText>
+                        <MudText Typo="Typo.body2">Skinned meshes at @SkinnedMeshFrameRate FPS</MudText>
+                    </MudStack>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="12" sm="4">
+                <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Start">
+                    <MudIcon Icon="@Icons.Material.Filled.Lightbulb" Color="Color.Warning" Size="Size.Small" Class="mt-1" />
+                    <MudStack Spacing="0">
+                        <MudText Typo="Typo.h5" Color="Color.Secondary">@DynamicLightCount</MudText>
+                        <MudText Typo="Typo.body2">Dynamic lights at @SkinnedMeshFrameRate FPS</MudText>
+                    </MudStack>
+                </MudStack>
+            </MudItem>
+        </MudGrid>
+    </MudStack>
+</MudPaper>
